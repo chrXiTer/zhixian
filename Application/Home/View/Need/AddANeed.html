@@ -1,0 +1,72 @@
+<include file="../../Common/View/Public/Header" title="添加一个服务" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<style>
+    #showImg div{
+        height:320px;
+        width:240px;
+        background-size:100% 100%;
+        background-repeat:no-repeat;
+    }
+</style>
+
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">发布一个需求</h2>
+	</div>
+	<div class="panel-body">
+        <div class="form-group">
+            <label for="Title">标题</label>
+            <input type="text" class="form-control" id="Title" name="Title" placeholder="输入提供的服务名">
+        </div>
+        <div class="form-group">
+            <label for="Introduction">描述</label>
+            <textarea class="form-control" id="Introduction" name="Introduction" placeholder="输入提供的服务简介"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="Contacts">联系人</label>
+            <input class="form-control" id="Contacts" name="Contacts" placeholder="输入服务联系人">
+        </div>
+        <div class="form-group">
+            <label for="Phone">联系电话</label>
+            <input class="form-control" id="Phone" name="Phone" placeholder="输入提供的服务的地址">
+        </div>
+        <button id="submitEdit" type="button" class="btn btn-default">提交</button>
+        <span id="submitEditInfo"></span>
+	</div>
+</div>
+
+<script>
+	var submitEditE = document.getElementById("submitEdit");
+	submitEditE.onclick = function (){
+		var submitEditInfoE = document.getElementById("submitEditInfo");
+		submitEditE.disabled = true;
+		submitEditInfoE.innerText = "提交中...";
+		var dataObj = {
+            Title:          document.getElementById("Title").value,
+            Introduction:   document.getElementById("Introduction").value,
+            Contacts:       document.getElementById("Contacts").value,
+            Phone:          document.getElementById("Phone").value
+		};
+		var dataStr = JSON.stringify(dataObj);
+		var url = "/COUNTY_SPELLING/Home/Api/AddANeed/";
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST",url);
+		xhr.send(dataStr);
+		xhr.onreadystatechange = function (e) {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+                var responseObj = JSON.parse(xhr.responseText);
+                if(responseObj.status == "success"){
+                    submitEditInfoE.innerText = "提交成功，将跳转到服务显示页面";
+                    window.location.href = "/COUNTY_SPELLING/Home/Need/DisplayANeed/" + responseObj.newNeedId;
+                }else{
+                    submitEditInfoE.innerText = "发生错误";
+                }
+			}
+		};
+	}
+</script>
+
+
+<include file="../../Common/View/Public/Footer" /> 

@@ -1,0 +1,19 @@
+ul.text-title-list{
+    margin:0;
+    padding-left:10px;
+}
+
+ul.text-title-list li{
+    list-style: none;
+    font-size:16px;
+    line-height: 30px;
+}
+
+ul.text-title-list li a{
+    text-decoration: none;
+    color: #666;
+}
+
+ul.text-title-list li a:hover{
+    text-decoration:underline;
+}

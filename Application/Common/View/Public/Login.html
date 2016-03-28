@@ -1,0 +1,23 @@
+<?php 
+use Common\Common\AccountTool;
+$currentUser = AccountTool::getCurrentUser();
+if($currentUser !== NULL){
+?><form style="margin-bottom:0em" action="/Home/Account/LogOff" method="post" id="logoutForm" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="navbar-brand" href="/Home/Account/Profile">欢迎您 {$currentUser["username"]}</a>
+            </li>
+            <li><a class="navbar-brand" href="javascript:document.getElementById('logoutForm').submit()">退出</a></li>
+            <li><a class="navbar-brand" href="/<?php echo COUNTY_SPELLING?>/Home/Main/GoOut">外出</a></li>
+        </ul>
+    </form>
+<?php 
+}else{
+?><ul class="nav navbar-nav  navbar-right">
+        <li><a class="navbar-brand" href="/Home/Account/Register?returnUrl=__SELF__">注册</a></li>
+        <li><a class="navbar-brand" href="/Home/Account/Login?returnUrl=__SELF__">登录</a></li>
+        <li><a class="navbar-brand" href="/<?php echo COUNTY_SPELLING?>/Home/Main/GoOut">切换地区</a></li>
+    </ul>
+<?php 
+}
+?>

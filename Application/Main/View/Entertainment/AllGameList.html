@@ -1,0 +1,335 @@
+<include file="../../Common/View/Public/Header" title="知县—娱乐-游戏" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">游戏列表1</h2>
+	</div>
+	
+	<p class="panel-body" id="gameListBody1">
+	</p>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">游戏列表2</h2>
+	</div>
+	
+	<p class="panel-body" id="gameListBody2">
+	</p>
+</div>
+
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">游戏列表3</h2>
+	</div>
+	
+	<p class="panel-body" id="gameListBody3">
+	</p>
+</div>
+
+	<script>
+var data = [
+	{ name: "bmbmt", text: "斑马斑马跳", img: "games/bmbmt/icon" },
+	{ name: "blockgame", text: "合体积木", img: "games/blockgame/icon" },
+	{ name: "blfc", text: "暴力飞车", img: "games/blfc/icon" },
+	{ name: "blackjack", text: "21点", img: "games/blackjack/icon" },
+	{ name: "ai", text: "糖果丘比特", img: "games/ai/icon" },
+	{ name: "freekick", text: "任意球大师", img: "games/freekick/icon" },
+	{ name: "3dboxing", text: "3d拳击", img: "games/3dboxing/icon" },
+	{ name: "100c", text: "是男人就下100层", img: "games/100c/icon" },
+	{ name: "coreball", text: "coreball", img: "games/coreball/icon" },
+	{ name: "hgy", text: "画个圆", img: "games/hgy/icon" },
+	{ name: "yd", text: "圆点", img: "games/yd/icon" },
+	{ name: "dwlx", text: "动物连线", img: "games/dwlx/icon" },
+	{ name: "hjby", text: "火箭兔奔月", img: "games/hjby/icon" },
+	{ name: "feiyu", text: "小猪飞飞", img: "games/feiyu/icon" },
+	{ name: "xzhsdmx", text: "新召唤师峡谷冒险", img: "games/xzhsdmx/icon" },
+	{ name: "xxcbdwf", text: "炫炫翅膀带我飞", img: "games/xxcbdwf/icon" },
+	{ name: "ttxdszm", text: "天天炫斗", img: "games/ttxdszm/icon" },
+	{ name: "ttfc", text: "天天飞车", img: "games/ttfc/icon" },
+	{ name: "qsj", text: "枪神记", img: "games/qsj/icon" },
+	{ name: "minixd", text: "mini炫斗", img: "games/minixd/icon" },
+	{ name: "luoke", text: "洛克王国", img: "games/luoke/icon" },
+	{ name: "horsegame", text: "跳圈圈", img: "games/horsegame/icon" },
+	{ name: "dbj", text: "大宝剑", img: "games/dbj/icon" },
+	{ name: "cyb", text: "插月饼", img: "games/cyb/icon" },
+	{ name: "cbd", text: "抽绷带", img: "games/cbd/icon" },
+	{ name: "bdxpg", text: "魂之利刃", img: "games/bdxpg/bdxpg.jpg);" },
+	{ name: "gdzmn", text: "搞定丈母娘", img: "games/gdzmn/icon" },
+	{ name: "bbqdf", text: "爸爸去兜风", img: "games/bbqdf/icon" },
+	{ name: "fcys", text: "废柴勇士", img: "games/fcys/icon" },
+	{ name: "fkcsg", text: "疯狂猜水果", img: "games/fkcsg/icon" },
+	{ name: "jntt", text: "贱鸟跳跳", img: "games/jntt/icon" },
+	{ name: "wzdz", text: "蚊子大战", img: "games/wzdz/icon" },
+	{ name: "dtsl", text: "动态视力", img: "games/dtsl/dtsl" },
+	{ name: "mwzne", text: "萌娃在哪儿", img: "games/mwzne/icon" },
+	{ name: "pmp", text: "拍马屁", img: "games/pmp/icon" },
+	{ name: "szcg", text: "数字闯关", img: "games/szcg/icon" },
+	{ name: "mspt", text: "美女拼图", img: "games/mspt/icon" },
+	{ name: "cjmla", text: "超级马里奥", img: "games/cjmla/icon" },
+	{ name: "fkbttz", text: "疯狂冰桶挑战", img: "games/fkbttz/icon" },
+	{ name: "jksz", text: "解开绳子", img: "icon/jksz" },
+	{ name: "ckf", text: "查开房", img: "games/ckf/ckf" },
+	{ name: "dbcs", text: "逗比测试", img: "games/dbcs/dbcs.jpg);" },
+	{ name: "ftz", text: "挑战繁体字", img: "games/ftz/ftz.jpg);" },
+	{ name: "wzdz", text: "蚊子大战", img: "icon/wzdz" },
+	{ name: "fkcsg", text: "疯狂猜水果", img: "icon/fkcsg" },
+	{ name: "dtsl", text: "动态视力", img: "icon/dtsl" },
+	{ name: "symdsb", text: "随意门（屌丝版）", img: "games/symdsb/icon" },
+	{ name: "zwdzjs", text: "植物大战僵尸", img: "games/zwdzjs/icon" },
+	{ name: "bsqpz2", text: "逼死强迫症2", img: "games/bsqpz2/icon" },
+	{ name: "xksds", text: "胸口碎大石", img: "icon/xksds" },
+ 	{ name: "sds", text: "水滴", img: "icon/sds" },   
+	{ name: "flnu", text: "粉绿男女", img: "icon/flnu" },
+	{ name: "djz", text: "打击者", img: "icon/djz" },
+	{ name: "hjkg", text: "黄金矿工", img: "icon/hjkg" },
+	{ name: "bljqzffxwz", text: "反腐小王子", img: "icon/bljqzffxwz" },
+	{ name: "znm", text: "转你妹", img: "icon/znm" },
+	{ name: "zfj", text: "纸飞机", img: "icon/zfj" },
+	{ name: "ksiphone6", text: "狂射iphone6", img: "icon/ksiphone6" },
+	{ name: "tuzi", text: "小兔子快快跑", img: "icon/tuzi" },
+	{ name: "ttg", text: "跳跳狗", img: "icon/ttg" },
+	{ name: "saolei", text: "扫雷", img: "icon/saolei" },
+	{ name: "qbllk", text: "奇葩连连看", img: "icon/qbllk" },
+	{ name: "maomi", text: "猫咪", img: "icon/maomi" },
+	{ name: "kaixinlian", text: "开心消消乐", img: "icon/kaixinlian" },
+	{ name: "jinhua", text: "进化", img: "icon/jinhua" },
+	{ name: "jingzi", text: "拯救精子", img: "icon/jingzi" },
+	{ name: "dalaohu", text: "打老虎", img: "icon/dalaohu" },
+	{ name: "symh", text: "色域迷惑人", img: "icon/symh" },
+	{ name: "chezhi", text: "厕纸挑战", img: "icon/chezhi" },
+	{ name: "qqppp", text: "气球砰砰砰", img: "icon/qqppp" },
+	{ name: "hczz", text: "横冲直闯", img: "icon/hczz" },
+	{ name: "biaoche", text: "疯狂飙车", img: "icon/biaoche" },
+	{ name: "baba", text: "粑粑去哪儿", img: "icon/baba" },
+	{ name: "ceast", text: "嫦娥爱色兔", img: "icon/ceast" },
+	{ name: "dwy", text: "打我呀打我呀", img: "icon/dwy" },
+	{ name: "gudaye", text: "股票你大爷", img: "icon/gudaye" },
+	{ name: "jyfy", text: "监狱风云", img: "icon/jyfy" },
+	{ name: "jyfy2", text: "监狱风云2", img: "icon/jyfy2" },
+	{ name: "lbyhbyc", text: "路边的野花不要采", img: "icon/lbyhbyc" },
+	{ name: "nddsc", text: "能打多少下", img: "icon/nddsc" },
+	{ name: "njdsb", text: "能接多少杯", img: "icon/njdsb" },
+	{ name: "pxfzm", text: "泼醒小房子", img: "icon/pxfzm" },
+	{ name: "xiaosan", text: "她是小三吗", img: "icon/xiaosan" },
+	{ name: "ybdz", text: "月饼大战", img: "icon/ybdz" },
+	{ name: "zhaonige", text: "麦皇争霸《找你歌》", img: "icon/zhaonige" },
+	{ name: "mmttt", text: "萌萌跳跳兔", img: "icon/mmttt" },
+	{ name: "dlxfk", text: "强力小方块", img: "icon/dlxfk" },
+	{ name: "ndtnrgclm", text: "你的童年让狗吃了吗？", img: "icon/ndtnrgclm" },
+	{ name: "bsqpz", text: "憋死强迫症", img: "icon/bsqpz" },
+	{ name: "tzbp", text: "挑战憋屁", img: "icon/tzbp" },
+	{ name: "wbk", text: "挖鼻孔", img: "icon/wbk" },
+	{ name: "daoguo", text: "岛国么么哒", img: "icon/daoguo" },
+	{ name: "qmbttz", text: "全民冰桶挑战", img: "icon/qmbttz" },
+	{ name: "zqdn", text: "最强大脑", img: "icon/zqdn" },
+	{ name: "zzs", text: "涨姿势", img: "icon/zzs" },
+	{ name: "dlss", text: "大力射X", img: "icon/dlss" },
+	{ name: "bbjx", text: "步步惊心", img: "icon/bbjx" },
+	{ name: "sqs", text: "神枪手", img: "icon/sqs" },
+	{ name: "xz120", text: "寻找120", img: "icon/xz120" },
+	{ name: "monkey", text: "微信抢桃", img: "icon/monkey" },
+	{ name: "cscg", text: "测试你的出轨率", img: "icon/cscg" },
+	{ name: "mzpk", text: "名字大作战", img: "icon/mzpk" },
+	{ name: "fkfzm", text: "放开房祖名", img: "icon/fkfzm" },
+	{ name: "ymhddzc", text: "樱木花道在主场", img: "icon/ymhddzc" },
+	{ name: "gqtz", text: "哥，请挺住18秒！", img: "icon/gqtz" },
+	{ name: "blglez", text: "帮龙叔捞儿子", img: "icon/blglez" },
+	{ name: "xindonglian", text: "心动连连看", img: "icon/xindonglian" },
+	{ name: "liankan", text: "连连看", img: "icon/liankan" },
+	{ name: "qedfc", text: "企鹅大复仇", img: "icon/qedfc" },
+	{ name: "qpjzg", text: "强迫校正辊", img: "icon/qpjzg" },
+	{ name: "fytkzc", text: "飞跃天空之城", img: "icon/fytkzc" },
+	{ name: "cpp", text: "戳破泡泡", img: "icon/cpp" },
+	{ name: "wzxgz", text: "围住小鬼子", img: "icon/wzxgz" },
+	{ name: "rjd", text: "扔鸡蛋", img: "icon/rjd" },
+	{ name: "qwt", text: "青蛙跳", img: "icon/qwt" },
+	{ name: "jolin", text: "一起寻找蔡依林", img: "icon/jolin" },
+	{ name: "mnygl", text: "木乃伊归来", img: "icon/mnygl" },
+	{ name: "cdd", text: "吃豆豆", img: "icon/cdd" },
+	{ name: "cube", text: "变态俄罗斯方块", img: "icon/cube" },
+	{ name: "mtl", text: "摩天楼", img: "icon/mtl" },
+	{ name: "zhizhuxia", text: "蜘蛛侠", img: "icon/zhizhuxia" },
+	{ name: "xiaoshuai", text: "飞翔吧小帅", img: "icon/xiaoshuai" },
+	{ name: "ice_bucket", text: "冰桶挑战", img: "icon/ice_bucket" },
+	{ name: "bttz", text: "冰桶挑战-2B版", img: "icon/bttz" },
+	{ name: "yzcs", text: "影子传说", img: "icon/yzcs" },
+	{ name: "qmykl", text: "全民寻摇可乐", img: "icon/qmykl" },
+	{ name: "sqsdscj", text: "数钱数到手抽筋", img: "icon/sqsdscj" },
+	{ name: "qmxzfzm", text: "全民寻找房祖名", img: "icon/qmxzfzm" },
+	{ name: "mnbyg", text: "美女啵一个", img: "icon/mnbyg" },
+	{ name: "llll", text: "萝莉来了", img: "icon/llll" },
+	{ name: "jssjm", text: "激射神经猫", img: "icon/jssjm" },
+	{ name: "yuebing", text: "吃月饼大赛", img: "icon/yuebing" },
+	{ name: "cs", text: "财神", img: "icon/cs" },
+	{ name: "bdsjm", text: "暴打神经猫", img: "icon/bdsjm" },
+	{ name: "iq", text: "智商测试", img: "icon/iq" },
+	{ name: "gongfumao", text: "功夫猫", img: "icon/gongfumao" },
+	{ name: "dwz", text: "打蚊子", img: "icon/dwz" },
+	{ name: "ddb", text: "找大便", img: "icon/ddb" },
+	{ name: "diaoyu", text: "钓鱼", img: "icon/diaoyu" },
+	{ name: "heibai", text: "黑白块", img: "icon/heibai" },
+	{ name: "memeda", text: "么么哒", img: "icon/memeda" },
+	{ name: "ld", text: "宇宙激战", img: "icon/ld" },
+	{ name: "kanshu", text: "砍树", img: "icon/kanshu" },
+	{ name: "jb", text: "Danger", img: "icon/jb" },
+	{ name: "qiexigua", text: "切西瓜", img: "icon/qiexigua" },
+	{ name: "pigbaby", text: "小猪宝宝", img: "icon/pigbaby" },
+	{ name: "mxcz", text: "梦想成真", img: "icon/mxcz" },
+	{ name: "shenjingmao-zhuangbiban", text: "神经猫-装逼版", img: "icon/shenjingmao-zhuangbiban" },
+	{ name: "qixi1", text: "七夕跳跳跳", img: "icon/qixi1" },
+	{ name: "jg", text: "激光战警", img: "icon/jg" },
+	{ name: "money", text: "捡钱大战", img: "icon/money" },
+	{ name: "ygj", text: "一根筋玩到底", img: "icon/ygj" },
+	{ name: "xxoo", text: "XXOO", img: "icon/xxoo" },
+	{ name: "hl", text: "小鳄鱼", img: "icon/dl" },
+	{ name: "zuqiu", text: "滚滚足球", img: "icon/zuqiu" },
+	{ name: "yibihua", text: "一笔画", img: "icon/ybh" },
+	{ name: "duolao", text: "看你有多老", img: "icon/duolao" },
+	{ name: "shit", text: "炸屎奇遇记", img: "icon/shit" },
+	{ name: "weidao", text: "你在别人眼中味道", img: "icon/weidao" },
+	{ name: "zhaonimei", text: "微信找你妹", img: "icon/zhaonimei" },
+	{ name: "zazhi", text: "微信杂志效果", img: "icon/zazhi" },
+	{ name: "naoyangyang", text: "疯狂挠痒痒", img: "icon/naoyangyang" },
+	{ name: "honghaishilv", text: "红还是绿", img: "icon/honghaishilv" },
+	{ name: "jianren", text: "贱人配对", img: "icon/jianren" },
+	{ name: "diandeng", text: "最强电灯泡", img: "icon/diandeng" },
+	{ name: "baozi", text: "吃包子大赛", img: "icon/baozi" },
+	{ name: "pigu", text: "敢摸大老虎屁股吗", img: "icon/pigu" },
+	{ name: "2048", text: "2048", img: "icon/2048" },
+	{ name: "cjrst", text: "超级染色体", img: "icon/cjrst" },
+	{ name: "se2", text: "看你有多色II-双飞版", img: "icon/se2" },
+	{ name: "shouzhi", text: "疯狂手指", img: "icon/shouzhi" },
+	{ name: "dqe", text: "打企鹅", img: "icon/dqe" },
+	{ name: "zz", text: "Galactians", img: "icon/zz" },
+	{ name: "zhuogui", text: "捉鬼", img: "icon/zhuogui" },
+	{ name: "yh", text: "烟花", img: "icon/yh" },
+	{ name: "yao", text: "疯狂摇一摇", img: "icon/yao" },
+	{ name: "zhua", text: "抓抓抓！", img: "icon/zhua" },
+	{ name: "yang", text: "挠挠我", img: "icon/yang" },
+	{ name: "qixi", text: "七夕七夕", img: "icon/qixi" },
+	{ name: "sheqiu", text: "射球", img: "icon/sheqiu" },
+	{ name: "semo", text: "色魔", img: "icon/semo" },
+	{ name: "zuiqiangyanli", text: "最强眼力", img: "icon/zqyl" },
+	{ name: "xiongchumo", text: "3D熊出没", img: "icon/xiongchumo" },
+	{ name: "xiaopingguo", text: "小苹果", img: "icon/xiaopingguo" },
+	{ name: "xiaoniaofeifei", text: "小鸟飞飞飞", img: "icon/xiaoniaofeifei" },
+	{ name: "selang", text: "色狼划船", img: "icon/selang" },
+	{ name: "qingwa", text: "小青蛙过河", img: "icon/qingwa" },
+	{ name: "se", text: "看你有多色", img: "icon/se" },
+	{ name: "mishi", text: "密室逃亡", img: "icon/mishi" },
+	{ name: "bunengsi", text: "一个都不能死", img: "icon/bunengsi" },
+	{ name: "mingxuanyixian", text: "命悬一线", img: "icon/mingxuanyixian" },
+	{ name: "jicilang", text: "一夜几次郎", img: "icon/jicilang" },
+	{ name: "feidegenggao", text: "飞的更高", img: "icon/feidegenggao" },
+	{ name: "shenjingmao", text: "围住神经猫I", img: "icon/shenjingmao" },
+	{ name: "duxinshu", text: "神奇读心术", img: "icon/duxinshu" },
+	{ name: "duimutou", text: "堆木头", img: "icon/duimutou" }
+];
+
+
+var items = [
+	[
+		"100c", "ceast", "liankan","chezhi",
+		"3dboxing", "cj", "dwlx", "horsegame", "luoke",
+		"ai", "cjmla", "dwy", "ice_bucket", 
+		"bbjx", "coreball", "fcys", 
+		"bbqdf", "cpp",  "fkbttz", 
+		"bdxpg", "cscg", "fkcsg",  
+		"biaoche", "cyb", "fkfzm", "jingzi",
+		"blackjack", "dalaohu", "flnu", "jksz", 
+		"blfc", "daoguo", "freekick", "jntt", 
+		"blglez", "dbj", "ftz", "jolin", 
+		"bljqzffxwz", "fytkzc", 
+		"blockgame", "gdzmn", "jyfy", 
+		"bmbmt", "jyfy2", 
+		"bsqpz", "djz", "gqtz", "kaixinlian",
+		"bsqpz2", "dlss", "gudaye", 
+		"bttz", "dlxfk", "hczz", "ksiphone6", 
+		"cbd", "dtsl", "hgy", "lbyhbyc", 
+		"cdd", "hjkg"
+	],
+
+	[  "maomi", "minixd", "mmttt", "mnygl", "monkey",
+        "mspt", "mtl", "mwzne", "mzpk", "nddsc", "ndtnrgclm", "njdsb",
+		"pigbaby", "sheqiu", "xz120",
+		"pigu", "shit", "xzhsdmx",
+		"pmp", "shouzhi", "yang",
+		"pxfzm", "sqs", "yao",
+		"qbllk", "sqsdscj", "ybdz",
+		"qedfc", "symdsb", "yd","symh", "ygj",
+		"qiexigua", "szcg", "yh", "qingwa", "yibihua",
+		"qixi1", "ttfc", "ymhddzc",
+		"qmbttz", "ttg", "yuebing",
+		"qmxzfzm", "ttxdszm", "yzcs", "tuzi", "zazhi",
+		"qmykl", "tzbp", "zfj",
+		"qpjzg", "wbk", "zhaonimei",
+		"qqppp", "weidao", "zhizhuxia",
+		"qsj", "wzdz", "zhua",
+		"qwt", "wzxgz", "zhuogui",
+		"rjd", "xiaoniaofeifei", "znm",
+		"saolei", "xiaopingguo", "zqdn",
+		"sds", "xiaosan", "zqds",
+		"se", "xiaoshuai", "zuiqiangyanli",
+		"se2", "xindonglian", "zuqiu",
+		"selang", "xiongchumo", "zwdzjs",
+		"semo", "xksds", "zz",
+		"shenjingmao", "xxcbdwf", "zzs",
+		"shenjingmao-zhuangbiban", "xxoo"
+	],
+
+	[
+        "qixi", "hjby", "zhaonige",
+        "cube", "dbcs", "feiyu", "ckf", 
+		"baba", "2048", "duxinshu", "jssjm", 
+		"baozi", "dwz", "kanshu",
+		"bdsjm", "feidegenggao", 
+		"bunengsi", "gongfumao", "ld",
+		"cjrst", "heibai", "llll",
+		"cs", "hl", "memeda", 
+		"ddb", "honghaishilv", "mingxuanyixian",
+		"diandeng", "iq", "mishi", 
+		"diaoyu", "jb", "mnbyg",
+		"dqe", "jg", "money", 
+		"duimutou", "jianren", "mxcz", 
+		"duolao", "jicilang", "naoyangyang",
+	]
+];
+		
+
+		var dataObj = {};
+		data.map(function(value){
+			dataObj[value.name] = {text:value.text};
+		});
+		var strTp = '<a style＝"margin:3px 9px 3px 9px;" href="/Main/Entertainment/Game/###name###/###pathFlag###">\n\
+						<span class="label label-success">###text###</span>\n\
+					</a>\n';
+		
+		function setContent(i){
+			var str = "";
+			var gameListBodyE = document.getElementById("gameListBody" + (i+1));
+			items[i].map(function(value){
+				try{
+				var strTmp = strTp
+					.replace("###name###", value)
+					.replace("###text###", (dataObj[value] || {text:value}).text)
+					.replace("###pathFlag###", i);
+				}catch(e){
+					var dd = e;
+				}
+					
+				str = str + strTmp;
+			});
+			gameListBodyE.innerHTML = str;
+		};
+		
+		setContent(0);
+		setContent(1);
+		setContent(2);
+		
+	</script>
+
+<include file="../../Common/View/Public/Footer" />
+

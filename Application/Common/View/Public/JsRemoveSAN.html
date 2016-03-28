@@ -1,0 +1,60 @@
+<script>
+function GRemoveSAN(){
+	var managmentItem = function(calledActionInUrl){
+		var removeFlagEs = document.getElementsByClassName("remove-flag");
+		for(var i=0; i < removeFlagEs.length; i++){
+			removeFlagEs[i].style.display = "inline";
+			var idStr = removeFlagEs[i].id.replace("removeFlag","");
+			
+			;(function(){
+				var idInt = parseInt(idStr); //用闭包保存变量
+				removeFlagEs[i].onclick = function(){
+					removeAItem(idInt, calledActionInUrl);
+				}	
+			})();
+		}
+	}
+
+	function removeAItem(idInt, calledActionInUrl){	
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "/COUNTY_SPELLING/Home/Api/" + calledActionInUrl + "/" + idInt);
+		xhr.send('{"id": "'+ idInt +'"}');
+		xhr.onload = function(e){
+			var responseObj = JSON.parse(xhr.responseText);
+			if(responseObj.status && responseObj.status == "ok"){
+				removeAItemFromPage(idInt);
+			}
+		}
+	}
+	
+	function removeAItemFromPage(idInt){
+			var id = "removeFlag" + idInt;
+			var item = document.getElementById(id);
+			item.parentElement.remove();
+	}
+
+	var normalDisplayFunc = function(){
+		var removeFlagEs = document.getElementsByClassName("remove-flag");
+		for(var i=0; i < removeFlagEs.length; i++){
+			removeFlagEs[i].style.display = "none";
+		}
+	}
+
+	this.getClickCallBack = function(url){
+		var linkStatus = "管理";
+		var clickCallBack = function(e){
+			if(linkStatus == "管理"){
+				managmentItem(url);
+				e.target.innerText = "正常显示";
+				linkStatus = "正常显示";
+			}else{
+				normalDisplayFunc();
+				e.target.innerText = "管理";
+				linkStatus = "管理";
+			}
+			return false;
+		}
+		return clickCallBack;
+	}
+}
+</script>

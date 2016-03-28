@@ -1,0 +1,19 @@
+<include file="../../Common/View/Public/Header" title="新鲜分享" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">新鲜分享</h2>
+	</div>
+	<div class="panel-body">
+		<?php foreach($newsList as $index => $news){
+				$classStr = "list-group-item-default" /*($index / 2 == 0)? "list-group-item-info" : "list-group-item-warning" */ ?>			
+			<li class="list-group-item {$classStr}">
+				<a href="/COUNTY_SPELLING/Home/News/DisplayANews/{$news.id}">{$news.title}</a>
+			</li>
+		<?php } ?>
+		</ul>
+	</div>
+</div>
+
+<include file="../../Common/View/Public/Footer" /> 

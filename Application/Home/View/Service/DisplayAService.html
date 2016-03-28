@@ -1,0 +1,86 @@
+<include file="../../Common/View/Public/Header" title="{$viewData.service.name}" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">{$viewData.service.name}</h2>
+	</div>
+    <div class="panel-body">
+        <p>
+            <label for="Introduction">介绍</label>
+            {$viewData.service.introduction}
+        </p>
+        <p>
+            <label for="Type">服务类别</label>
+            {$viewData.service.currentSeviceType.name}
+        </p>
+        <p>
+            <label for="Tontacts">联系人</label>
+            {$viewData.service.contacts}
+        </p>
+        <p>
+            <label for="Phone">联系电话</label>
+            {$viewData.service.phone}
+        </p>
+        <p>
+            <label for="Address">地址</label>
+            {$viewData.service.address}
+        </p>
+        <p>
+            <label for="Address">服务发布者</label>
+            <a href="/Home/Account/Profile/{$viewData.service.publisher.username}">{$viewData.service.publisher.username}</a>
+            
+        </p>
+        <p style="position:relative">
+            <label id="InputFileUploadInfo" for="InputFileUpload">展示图片</label>
+            <?php $imgurl = $viewData["service"]["ImgsUrl"] ?>
+            <foreach name="imgurl" item="imgUrl">
+                <img style="height:320px; width:240px;" src="{$imgUrl}"/>
+            </foreach>
+        </p>
+        <?php if($viewData["isMyself"]){ ?>
+        <a href="/COUNTY_SPELLING/Home/Service/EditAService/{$viewData.service.id}">修改</a>
+        <?php } ?>
+    </div>
+    
+    <div class="alert alert-success" role="alert"></div>
+    <?php $comments = $viewData->comments; ?>
+    <div id="allComment">
+        <foreach name="comments" item="vo">
+            <p><a href="#">{$vo.author}</a>{$vo.content}</p>
+        </foreach>
+    </div>
+    
+    <?php if($viewData["isLogin"]){ ?>
+    <div>
+        <form>
+            <textarea id="newCommentContent" class="form-control" rows="3"></textarea>
+            <button id="submitComment" type="button" class="btn btn-default">添加评论</button>
+        </form>
+        <include file="../../Common/View/Public/SubmitFormJs" />
+        <script>
+            document.getElementById("submitComment").onclick = function(){
+                var data = JSON.stringify({
+                    commentContent:document.getElementById("newCommentContent").value,
+                    serviceId:{$viewData.service.id}
+                });
+                var callbackOnSuccess = function(e){
+                    responseObj = JSON.parse(e.currentTarget.responseText);
+                    if(responseObj.authorId){
+                        var newCommentNode = document.createElement("p");
+                        newCommentNode.innerHTML = '<a href="#">' + responseObj.authorName + '</a>:' + responseObj.content;
+                        document.getElementById("allComment").appendChild(newCommentNode);
+                    }
+                }
+                AjaxSubmitForm("/Home/Api/AddACommentInService", data, callbackOnSuccess);
+            }
+        </script>
+     </div>
+     <?php }else {?>
+     <div>
+         <a href="/Home/Account/Login?returnUrl=__SELF__">登录以添加评论</a>
+     </div>
+     <?php }?>
+</div>
+
+<include file="../../Common/View/Public/Footer" /> 

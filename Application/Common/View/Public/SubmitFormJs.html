@@ -1,0 +1,12 @@
+<script>
+	function AjaxSubmitForm(url, formData, callbackOnSuccess){
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST",url);
+		xhr.send(formData);
+		xhr.onreadystatechange = function (e) {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				callbackOnSuccess(e)
+			}
+		};
+	}
+</script>

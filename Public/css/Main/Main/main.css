@@ -1,0 +1,139 @@
+h1 {
+    font-size:24px;
+    color: #555;
+}
+
+.contents > h1,
+.recommend > h1{
+    border-bottom-style: solid;
+    border-bottom-color: #85c155;
+    border-bottom-width: 1px;
+    padding-bottom: 2px;
+    color: #555;
+    
+}
+
+h2 {
+    font-size:20px;
+    margin:2px;
+}
+
+#all{
+    width:100%;  /*  放在bootstrap的 .container中，需要100%宽度才好看。 最大也只能达到750px*/
+    overflow:hidden;
+}
+    .main .recommend{
+        overflow: hidden;  /* 生成快格式上下文, 使之能包围内部的浮动元素*/
+    }
+    .main .contents{ 
+        overflow: hidden;  /* 生成快格式上下文, 使之能包围内部的浮动原生*/
+    }
+
+#all aside{  
+    margin: 0 auto; 
+    width:240px;
+}
+
+#chrX_Fucos,
+#chrX_TextTitleList,
+.main .contents .content{
+    width:345px; 
+}
+
+@media(max-width:769px){
+    .main h1{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .main .recommend #chrX_Fucos,
+    .main .recommend #chrX_TextTitleList,
+    .main .contents .content{  /*  小屏幕，主内容单栏显示，内部元素居中 */
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:768px){ /*  中屏，主内容双栏显示 */
+    .main .recommend #chrX_Fucos,
+    .main .recommend #chrX_TextTitleList,
+    .main .contents .content{
+        float:left;
+    }
+    
+    .main .recommend #chrX_Fucos,  /*  主内容会双栏显示，中间间距大 */
+    .main .contents .content:nth-child(even){
+        margin-right: 30px
+    }
+}
+
+@media (min-width:992px) { /*  大屏 侧栏显示在右边。内部宽度970px*/
+    .main .recommend #chrX_Fucos,  /*  主内容会双栏显示，中间间距小 */
+    .main .contents .content:nth-child(even){
+        margin-right: 5px
+    }
+    
+    #all aside{  
+        float:right;
+        margin-top: 40px;
+        margin-left: 5px;
+    }
+    .main{    /*  主内容左浮动，保证侧栏能显示在右边，而不是换行 */ 
+        float:left;
+    }
+}
+
+@media (min-width:1200px) { 
+    .main .recommend #chrX_Fucos,  /*  超大屏 主内容会双栏显示，中间间距大 */
+    .main .contents .content:nth-child(even){
+        margin-right: 60px
+    }
+    
+    #all aside{ 
+        margin-right: 10px;
+    }
+    
+    #chrX_Fucos,
+    #chrX_TextTitleList,
+    .main .contents .content{
+        width:355px
+    }
+}
+
+
+#chrX_Fucos{
+    height:235px;
+}
+
+#chrX_GroupList{
+    overflow: hidden;  /* 生成快格式上下文, 使之能包围内部的浮动原生*/
+}
+
+.side-link a{
+  display: block;
+  position: relative;
+  float: left;
+  width: 145px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+
+.side-link a#weixin {
+  border: 1px #85c155 solid;
+  text-indent: 1.5em;
+  margin-right: 6px;
+  color: #85c155;
+}
+
+/* 为内部组件自定义样式 */
+#chrX_TextTitleList21 ul.text-title-list li,
+#chrX_TextTitleList22 ul.text-title-list li{
+    font-size:12px;
+    line-height: 22px;
+    list-style-type: disc;
+    color: #666;
+}
+
+

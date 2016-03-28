@@ -1,0 +1,68 @@
+<include file="../../Common/View/Public/Header" title="{$viewData.need.name}" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<h2>{$viewData->need.name}</h2>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">需要以下服务类</h3>
+    </div>
+    <div class="panel-body">
+    <p>
+        <label for="Introduction">介绍</label>
+        {$viewData.need.introduction}
+    </p>
+    <p>
+        <label for="Tontacts">联系人</label>
+        {$viewData.need.contacts}
+    </p>
+    <p>
+        <label for="Phone">联系电话</label>
+        {$viewData.need.phone}
+    </p>
+    <p>
+        <label for="Address">需求求助发布者</label>
+        <a href="/COUNTY_SPELLING/Home/Account/Profile/{$publisher.username}">{$viewData.publisher.username}</a>
+    </p>
+    
+    <div class="alert alert-success" role="alert"></div>
+    <?php $comments = $viewData["comments"]; ?>
+    <div id="allComment">
+        <foreach name="comments" item="vo">
+        <p><a href="#">{$vo.author}</a>{$vo.content}</p>
+        </foreach>
+    </div>
+        
+    <?php if($viewData["isLogin"]){ ?>
+    <div>
+        <form>
+        <textarea id="newCommentContent" class="form-control" rows="3"></textarea>
+        <button id="submitComment" type="button" class="btn btn-default">添加留言</button>
+        </form>
+        <include file="../../Common/View/Public/SubmitFormJs" />
+        <script>
+        var countySpelling = COUNTY_SPELLING;  /* PHP 模版替换 */
+        var needId = {$viewData.need.id}; /* PHP 模版替换 */
+        document.getElementById("submitComment").onclick = function(){
+            var data = JSON.stringify({
+                commentContent:document.getElementById("newCommentContent").value,
+                needId:needId
+            });
+            var callbackOnSuccess = function(e){
+                responseObj = JSON.parse(e.currentTarget.responseText);
+                if(responseObj.authorId){
+                    var newCommentNode = document.createElement("p");
+                    newCommentNode.innerHTML = '<a href="#">' + responseObj.authorName + '</a>:' + responseObj.content;
+                    document.getElementById("allComment").appendChild(newCommentNode);
+                }
+            }
+            AjaxSubmitForm("/" + countySpelling +"/Home/Api/AddACommentInNeed", data, callbackOnSuccess);
+        }
+        </script>
+    </div>
+    <?php }else {?>
+    <div>
+        <a href="/Home/Account/Login?returnUrl=__SELF__">登录以添加留言</a>
+    </div>
+    <?php }?>
+</div>
+<include file="../../Common/View/Public/Footer" /> 

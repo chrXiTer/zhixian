@@ -1,0 +1,39 @@
+<include file="../../Common/View/Public/Header" title="所有事项" /> 
+<include file="../../Common/View/Public/Menu" /> 
+<style>
+	.remove-flag{
+		position:relative;
+		top: -10px;
+		left:-10px;
+		display: none;
+	}
+</style>
+<div class="panel panel-success" style="margin-top:10px">
+	<div class="panel-heading">
+		<h2 class="panel-title">
+			所有事项
+			<a style="float:right" href="/COUNTY_SPELLING/Home/Affair/AddAAffair">添加新事项</a>
+			<?php if($currentUserIsAdmin){ ?>
+			<a id="managmentItem" style="float:right;margin-right:6px" href="#">管理</a>
+			<?php } ?>
+		</h2>
+	</div>
+	<p class="panel-body">
+		<foreach name="affairs" item="vo">
+			<span>
+				<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Affair/DisplayAAffair/{$vo.id}">
+					<span class="label label-success">{$vo.name}</span>
+				</a>
+				<span class="glyphicon glyphicon-remove remove-flag" id="removeFlag{$vo.id}"></span>
+			</span>
+		</foreach>
+	</p>
+</div>
+
+<include file="../../Common/View/Public/JsRemoveSAN" />
+<script>
+	var managmentItemE = document.getElementById("managmentItem");
+	managmentItemE.onclick = new GRemoveSAN().getClickCallBack("DeleteAAfairById");
+</script>
+
+<include file="../../Common/View/Public/Footer" /> 

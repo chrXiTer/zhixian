@@ -1,0 +1,10 @@
+<include file="../../Common/View/Public/Header" title="注册" /> 
+<include file="../../Common/View/Public/Menu" /> 
+        <form id="formRegister" method="post" style="margin: 0 auto; padding:10">
+            用户名：<input id ="UserName" name="UserName" type="text" maxlength="30" /><br/><br/>
+            密　码：<input id ="Password" name="Password" type="text" maxlength="30" /><br/><br/>
+            <a href="/Home/Account/Login?returnUrl=__SELF__" style="margin-left: 10px;">登录</a>
+            <button type="submit" class="btn btn-default" style="margin-left: 80px;">注册</button>
+            <span id="loginTips"></span>
+        </form>
+<include file="../../Common/View/Public/Footer" /> 

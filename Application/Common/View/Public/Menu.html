@@ -1,0 +1,41 @@
+<div id="chrx-menu" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="goBack" type="button" style="display:none" onclick="history.go(-1);return false" >⬅️</a>
+            <a class="navbar-brand" href="/Main/Main">知县</a>
+            <a class="navbar-brand" href="/Main/Entertainment">休闲娱乐</a>
+            <a class="navbar-brand" href="/Main/News">新鲜分享</a>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" style="font-size:12px" href="/<?php echo COUNTY_SPELLING?>/Home/Main"><?php echo C('COUNTY_NAME')?></a></li>
+                <li><a class="navbar-brand" style="font-size:12px" href="/<?php echo COUNTY_SPELLING?>/Home/Main/Navigation">本县导航</a></li>
+                <li><a class="navbar-brand" style="font-size:12px" href="/<?php echo COUNTY_SPELLING?>/Home/News">本地分享</a></li>
+                <li><a class="navbar-brand" style="font-size:12px" href="/<?php echo COUNTY_SPELLING?>/Home/Baike">本地百科</a></li>
+            </ul>
+            <include file="../../Home/View/Public/Login"/>
+        </div>
+    </div>
+</div>
+
+<script>
+function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
+    }
+}
+var goBackE = document.getElementById("goBack");
+if(isWeiXin()){//在微信中需要显示放回箭头，并调整右边间隙。
+    goBackE.style.display="";  //不在微信中则不显示。
+    goBackE.style.paddingRight="0px";     
+}
+</script>

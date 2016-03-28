@@ -1,0 +1,30 @@
+<include file="../../Common/View/Public/Header" title="添加一个服务" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">正在使用中的类型</h3>
+	</div>
+	<p class="panel-body">
+		<foreach name="serviceTypesInUsing" item="vo">
+			<a style＝"margin:3px 9px 3px 9px;" href="">
+				<span class="label label-success">{$vo.name}</span>
+			</a>
+		</foreach>
+	</p>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">所有类型</h3>
+	</div>
+	<p class="panel-body">
+		<foreach name="allServiceTypes" item="vo">
+			<a style＝"margin:3px 9px 3px 9px;" href="">
+				<span class="label label-success">{$vo.name}</span>
+			</a>
+		</foreach>
+	</p>
+</div>
+
+<include file="../../Common/View/Public/Footer" />

@@ -1,0 +1,77 @@
+<include file="../../Common/View/Public/Header" title="新鲜分享" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success" style="margin-top:10px">
+    <div class="panel-heading">
+		<h2 class="panel-title">添加一个百科条目</h2>
+	</div>
+	<div class="panel-body">
+        <div style="max-width:360px">
+                <label for="title">条目名:</label><br/>
+                <input id="title" style="width:100%" tabindex="1" name="title" type="text" value="" autofocus="">
+        </div> 
+        <div style="max-width:360px; margin-top:20px">
+            <label for="content">正文:</label><br/>
+            <div id="content" contenteditable="true" style="border-style:solid;border-width:1px; border-color:#ccc; min-height:60px">
+            </div>
+        </div>
+    <div style="max-width:360px;position:relative">
+        <label id="InputFileUploadInfo" for="InputFileUpload">添加图片</label>
+        <progress id="InputFileUploadProgress" value="0" max="100" style="visibility:hidden"></progress>
+        <input id="InputFileUploadUrl" type="hidden"/>
+        <input id="InputFileUpload" class="form-control" type="file" 
+               style="opacity:0.1;background-color:red;OVERFLOW: hidden; HEIGHT: 100%; WIDTH: 100%; POSITION: absolute; LEFT: 0px; MARGIN: 0px; Z-INDEX: 2; DISPLAY: inline-block; TOP: 0px" />
+    </div>
+        <button id="submitEdit" type="button" class="btn btn-default">提交</button>
+        <span id="submitEditInfo"></span>
+	</div>
+</div>
+
+<include file="../../Common/View/Public/JsFileUpload" />
+<include file="../../Common/View/Public/JsEditorTool" />
+<script>
+    var EditorTool = new GVarEditorTool();
+    var contentE = document.getElementById("content");
+    var data = {
+        fileUploadE : document.getElementById("InputFileUpload"),
+        fileUploadInfoE: document.getElementById("InputFileUploadInfo"),
+        fileUploadProgressE: document.getElementById("InputFileUploadProgress"),
+        path : "AddAService",
+        onSuccess:function(imgUrl){
+            var fileUploadUrlE = document.getElementById("InputFileUploadUrl");
+            fileUploadUrlE.value = fileUploadUrlE.value + imgUrl + ";";
+            EditorTool.insertHtmlAtSelectionEnd('<img src="'+ imgUrl + '" style="display:block;width:90%; max-width:350px"/>', contentE);
+        }
+    }
+    var FileUpload = new GVarFileUpload(data);
+
+    contentE.onmouseup= function(){EditorTool.savePosition(contentE)};
+    contentE.onkeyup= function(){EditorTool.savePosition(contentE)};
+    var submitEditE = document.getElementById("submitEdit");
+	submitEditE.onclick = function (){
+        var titleE = document.getElementById("title");
+		var submitEditInfoE = document.getElementById("submitEditInfo");
+		submitEditE.disable = true;
+		submitEditInfoE.innerText = "提交中...";
+		var dataObj = {
+            title:titleE.value,
+			content:contentE.innerHTML
+		}
+		var dataStr = JSON.stringify(dataObj);
+		var url = "/Home/Api/AddAEntry";
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST",url);
+		xhr.send(dataStr);
+		xhr.onreadystatechange = function (e) {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				submitEditInfoE.innerText = "添加分享成功";
+                var responseJson = e.currentTarget.responseText;
+                var responseObj = JSON.parse(responseJson);
+                var addedEntryId = responseObj.addedNewsId;
+                window.location.href= "/COUNTY_SPELLING/Home/Baike/DisplayAEntry/" + addedEntryId;
+			}
+		};
+	}
+</script>
+
+<include file="../../Common/View/Public/Footer" /> 

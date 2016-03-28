@@ -1,0 +1,39 @@
+ul.first-img-text-title-list{
+    margin:0;
+    padding-left:10px;
+}
+
+ul.first-img-text-title-list li{
+    list-style: none;
+    font-size:16px;
+    line-height: 30px;
+    overflow: hidden;  /* 生成块格式上下文，使之能包围内部的浮动原生，从而防止内部浮动元素影响下一个li项的显示*/
+}
+
+ul.first-img-text-title-list li a{
+    text-decoration: none;
+    color: #666;
+}
+
+ul.first-img-text-title-list li a:hover{
+    text-decoration:underline;
+}
+
+ul.first-img-text-title-list li img{
+    float:left;
+    width:120px;
+    height: 90px;
+    margin-right: 3px; 
+}
+
+ul.first-img-text-title-list li h3{
+    font-size: 16px;
+    margin: 2px;
+}
+
+ul.first-img-text-title-list li p{
+    font-size: 14px;
+    line-height: 16px;
+    margin: 6px;
+    color: #999;
+}

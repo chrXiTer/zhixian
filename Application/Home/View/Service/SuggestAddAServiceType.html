@@ -1,0 +1,64 @@
+<include file="../../Common/View/Public/Header" title="添加一个服务" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">正在使用中的类型</h3>
+	</div>
+	<p class="panel-body">
+		<foreach name="serviceTypesInUsing" item="vo">
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					{$vo.name}
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li><a href="#">停用</a></li>
+				</ul>
+			</div>
+		</foreach>
+	</p>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">所有类型</h3>
+	</div>
+	<p class="panel-body">
+		<foreach name="allServiceTypes" item="vo">
+			<a style＝"margin:3px 9px 3px 9px;" href="">
+				<span class="label label-success">{$vo.name}</span>
+			</a>
+		</foreach>
+	</p>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">申请添加一个新类型</h3>
+	</div>
+	<div class="panel-body">
+		<form method="post">
+			<div class="form-group">
+				<label for="Name">类型名</label>
+				<input type="text" class="form-control" id="Name" name="Name" value="{$service.name}">
+			</div>
+			<div class="form-group">
+				<label for="ParentId">父类型</label>
+				<select id="ParentId" name="ParentId">
+                    echo '<option value ="0" selected>-无-</option>';
+					<?php
+						for($i=0; $i < count($allServiceTypes); $i+=1){
+						$value = $allServiceTypes[$i]["id"];
+						$showText = $allServiceTypes[$i]["name"];
+						echo '<option value ="'.$value.'">'.$showText.'</option>';
+					}
+					?>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-default">提交</button>
+		</form>
+	</div>
+</div>
+
+<include file="../../Common/View/Public/Footer" />

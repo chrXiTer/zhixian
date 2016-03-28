@@ -1,0 +1,57 @@
+<include file="../../Common/View/Public/Header" title="办事指南-{$affair.name}" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<style>
+	.remove-flag{
+		position:relative;
+		top: -10px;
+		left:-10px;
+		display: none;
+	}
+</style>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">办事指南-{$affair.name}</h3>
+	</div>
+	<p class="panel-body">
+
+	</p>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			{$affair.name}—需要以下服务类
+			<?php if($currentUserIsAdmin){ ?>
+				<a id="managmentItem" style="float:right;margin-right:6px" href="#">管理</a>
+			<?php } ?>
+		</h3>
+	</div>
+	<div class="panel-body">
+		<foreach name="neededServiceTypes" item="vo">
+			<span>
+				<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Service/DisplayAServiceType/{$vo.id}">
+					<span class="label label-success">{$vo.name}</span>
+				</a>
+				<span class="glyphicon glyphicon-remove remove-flag" id="removeFlag{$vo.id}"></span>
+			</span>
+		</foreach>
+	
+		<br/>
+		<p>该事项还需要其它服务：
+			<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Affair/AddAServiceToAffair/{$affair.id}">
+				<span class="label label-primary">我来添加服务</span>
+			</a>
+		</p>
+	</div>
+</div>
+
+<include file="../../Common/View/Public/JsRemoveSAN" />
+<script>
+	var managmentItemE = document.getElementById("managmentItem");
+	var GRemoveSANObj = new GRemoveSAN();
+	managmentItemE.onclick = GRemoveSANObj.getClickCallBack("DeleteAServiceTypeFromAfair/{$affair.id}");
+</script>
+    
+<include file="../../Common/View/Public/Footer" /> 

@@ -1,0 +1,91 @@
+<script>
+    function GVarFileUpload(data){
+		this.fileUploadE = data.fileUploadE;
+        this.fileUploadInfoE = data.fileUploadInfoE;    
+		this.fileUploadProgressE = data.fileUploadProgressE;
+        this.path = data.path;
+        this.onSuccess = data.onSuccess;
+       
+////////////////////
+        this.getEventHander = function(self){
+            var uploadImage = function (self, file) { //有自己调用的回调函数，无需upvalue变量self（已经通过参熟传递self）
+                var fd = new FormData();
+                fd.append("fileToUpload", file);
+                fd.append("path", self.path);
+                //var accessToken = sessionStorage.getItem("access_token");
+                var xhr = new XMLHttpRequest();
+                xhr.upload.addEventListener("progress", uploadProgress, false);
+                xhr.addEventListener("load", uploadComplete, false);
+                xhr.addEventListener("error", uploadFailed, false);
+                xhr.addEventListener("abort", uploadCanceled, false);
+                var url = window.location.href;
+                var index1 = url.search(/\/[^\/]\/Home/) + 1;
+                var index2 = url.search(/\/Home/) + 1;
+                var COUNTY_SPELLING = url.substring(index1, index2);
+                xhr.open("POST", COUNTY_SPELLING + "/Home/Api/UploadFile");
+                //xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
+                xhr.send(fd);
+                if(self.fileUploadProgressE){
+                    self.fileUploadProgressE.style.visibility = "visible";
+                }
+            };
+            
+            var uploadProgress = function (e) {
+                if (e.lengthComputable) {
+                    var percentComplete = Math.round(e.loaded * 100 / e.total);
+                    if(self.fileUploadProgressE){
+                        self.fileUploadProgressE.value = percentComplete;
+                    }
+                }
+            };
+            
+            var uploadComplete = function (e) {/*e.target.readyState == 4*/
+                if (e.target.status == 200) {
+                    window.setTimeout(function () {
+                        if(self.fileUploadProgressE){
+                            self.fileUploadProgressE.style.visibility = "hidden";
+                        };
+                        if(self.fileUploadInfoE){ 
+                            self.fileUploadInfoE.innerText = self.fileUploadInfoE.innerText + " 上传完毕！";
+                        }
+                    }, 500, null);
+                    responseDataObj = JSON.parse(e.target.responseText);
+                    var fileUrl = responseDataObj.savepath + responseDataObj.savename;
+                    self.onSuccess(fileUrl);
+                } else {
+                    if(self.fileUploadInfoE){
+                        self.fileUploadInfoE.innerText = self.fileUploadInfoE.innerText + e.target.responseText;
+                    }
+                }
+            };
+        
+            var uploadFailed = function (e) {
+            };
+    
+            var uploadCanceled = function (e) {
+            };
+            return {"uploadImage" : uploadImage};
+        }
+
+////////////////////////
+        var self = this;
+        this.fileUploadE.onchange = function () {
+            var file = FileUpload.fileUploadE.files[0];
+            if(!file) {
+                return;
+            }
+            var fileSize = "0";
+            if (file) {
+                if (file.size > 1024 * 1024)
+                    fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+                else
+                    fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+                if(self.fileUploadInfoE){
+                    self.fileUploadInfoE.innerText = file.name + "(" + fileSize + ")";
+                }
+                self.getEventHander(self).uploadImage(self, file);
+            }
+        }
+///////////////////////
+    }
+</script>

@@ -1,0 +1,19 @@
+<include file="../../Common/View/Public/Header" title="百科" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div style="float:right">
+	
+</div>
+<div class="panel panel-success" style="margin-top:10px">
+	<div class="panel-heading">
+		<h2 class="panel-title">
+			{$data.title}
+			<a style="float:right" href="/COUNTY_SPELLING/Home/Baike/Edit/{$data.id}">编辑</a>
+		</h2>
+	</div>
+	<div class="panel-body">
+		{$data.content}
+	</div>
+</div>
+
+<include file="../../Common/View/Public/Footer" /> 

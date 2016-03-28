@@ -1,0 +1,28 @@
+<include file="../../Common/View/Public/Header" title="娱乐-游戏"  /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success" style="margin-left:-15px; margin-right:-15px; margin-top:0px;border:0px">
+	<div class="panel-heading" style="display:none">
+		<h2 class="panel-title">游戏</h2>
+	</div>
+	
+	<iframe class="panel-body" height="600" width="100%" style="padding:0px;border:0px"
+		src="{$baseUrl}/{$gameName}/{$indexFileName}">
+	</iframe>
+	
+	<div id="fullScreen" style="position:fixed;bottom:0px; right:0px">
+		全屏
+	</div>
+	<script>
+		document.getElementById("fullScreen").onclick = function(){
+			var docElm = document.documentElement;
+			if (docElm.requestFullscreen) {
+				docElm.requestFullscreen();
+			}
+			this.innerText = "退出全屏";
+		}
+	</script>
+
+</div>
+
+<include file="../../Common/View/Public/Footer" />

@@ -1,0 +1,31 @@
+<include file="../../Common/View/Public/Header" title="显示一个服务" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<h2>{$serviceType.name}</h2>
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">子服务类型</h3>
+	</div>
+	<div class="panel-body">
+		<foreach name="childrenServiceTypes" item="vo">
+			<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Service/DisplayAServiceType/{$vo.id}">
+				<span class="label label-success">{$vo.name}</span>
+			</a>
+		</foreach>
+	</div>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">包含服务</h3>
+	</div>
+	<div class="panel-body">
+		<foreach name="childrenServices" item="vo">
+			<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Service/DisplayAService/{$vo.id}">
+				<span class="label label-success">{$vo.name}</span>
+			</a>
+		</foreach>
+	</div>
+</div>
+
+<include file="../../Common/View/Public/Footer" /> 

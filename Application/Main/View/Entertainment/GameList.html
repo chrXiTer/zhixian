@@ -1,0 +1,29 @@
+<include file="../../Common/View/Public/Header" title="知县—娱乐-游戏" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">游戏精选
+			<a style="float:right;margin-right:6px" href="/Main/Entertainment/AllGameList">所有游戏</a>
+		</h2>
+	</div>
+	
+	<p class="panel-body" id="gameListBody">
+	</p>
+	
+	<script>
+		var gamesData = {$gamesData};
+		var strTp = '<a style＝"margin:3px 9px 3px 9px;" href="/Main/Entertainment/Game/###name###/0">\n\
+				<span class="label label-success">###text###</span>\n\
+			</a>\n';
+		var str = "";
+		gamesData.map(function(value){
+			var strTmp = strTp.replace("###name###", value.name).replace("###text###", value.text);
+			str = str + strTmp;
+		});
+		var gameListBodyE = document.getElementById("gameListBody");
+		gameListBodyE.innerHTML = str;
+	</script>
+</div>
+
+<include file="../../Common/View/Public/Footer" />

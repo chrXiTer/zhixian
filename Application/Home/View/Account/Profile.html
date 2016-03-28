@@ -1,0 +1,18 @@
+<include file="../../Common/View/Public/Header" title="我的主页" /> 
+<include file="../../Common/View/Public/Menu" /> 
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">{$data->UserName}</h2>
+	</div>
+	<div class="panel-body">
+		<p><label>积分:</label>###</p>
+		<p><label>真实姓名:</label>{$data->RealName}<p>
+		<p><label>手机号码:</label>{$data->Phone}<p>
+		<if condition="$isAdmin eq ture">
+			<p>您是管理员</p>
+		</if>
+		</p><label>归属地:</label>{$data->county}<a class="navbar-brand" href="#">挪窝</a></p>
+	</div>
+</div>
+
+<include file="../../Common/View/Public/Footer" /> 

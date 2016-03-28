@@ -1,0 +1,132 @@
+<include file="../../Common/View/Public/Header" title="添加一个服务" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<style>
+    #showImg div{
+        height:320px;
+        width:240px;
+        background-size:100% 100%;
+        background-repeat:no-repeat;
+    }
+</style>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">添加一个服务</h2>
+	</div>
+	<div class="panel-body">
+        <div class="form-group">
+            <label for="Name">名称</label>
+            <input type="text" class="form-control" id="Name" name="Name" placeholder="输入提供的服务名">
+        </div>
+        <div class="form-group">
+            <label for="TypeId">服务类别</label>
+            <select id="TypeId" name="TypeId">
+                <?php
+                for($i=0; $i < count($serviceTypes); $i+=1){
+                $value = $serviceTypes[$i]["id"];
+                $showText = $serviceTypes[$i]["name"];
+                    echo '<option value ="'.$value.'">'.$showText.'</option>';
+                }
+                ?>
+            </select>
+            <a href="/COUNTY_SPELLING/Home/Service/SuggestAddAServiceType">申请添加一个类型</a>
+        </div>
+        <div class="form-group">
+            <label for="Introduction">介绍</label>
+            <textarea class="form-control" id="Introduction" name="Introduction" placeholder="输入提供的服务简介"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="Tontacts">联系人</label>
+            <input class="form-control" id="Contacts" name="Contacts" placeholder="输入服务联系人">
+        </div>
+        <div class="form-group">
+            <label for="Phone">联系电话</label>
+            <input class="form-control" id="Phone" name="Phone" placeholder="输入提供的服务的联系电话">
+        </div>
+        <div class="form-group">
+            <label for="Address">地址</label>
+            <input class="form-control" id="Address" name="Address" placeholder="输入提供的服务的地址">
+        </div>
+        <div id="showImg" class="form-group">
+        </div>
+        
+        <input id="InputFileUploadUrl" type="hidden" name="ImgsUrl" />
+        <div class="form-group" style="position:relative">
+            <label id="InputFileUploadInfo" for="InputFileUpload">上传展示图片</label>
+            <progress id="InputFileUploadProgress" value="0" max="100" style="visibility:hidden"></progress>
+            <!--不设置name属性，防止提交时上传文件 -->
+            <input id="InputFileUpload" class="form-control" type="file" 
+                    style="opacity:0.1;background-color:red;OVERFLOW: hidden; HEIGHT: 100%; WIDTH: 100%; POSITION: absolute; LEFT: 0px; MARGIN: 0px; Z-INDEX: 2; DISPLAY: inline-block; TOP: 0px" />
+        </div>
+        <button id="submitEdit" type="button" class="btn btn-default">提交</button>
+        <span id="submitEditInfo"></span>
+	</div>
+</div>
+
+<include file="../../Common/View/Public/JsFileUpload" />
+<script>
+    var data = {
+        fileUploadE : document.getElementById("InputFileUpload"),
+        fileUploadInfoE: document.getElementById("InputFileUploadInfo"),
+        fileUploadProgressE: document.getElementById("InputFileUploadProgress"),
+        path : "AddAService",
+        onSuccess:function(imgUrl){
+            var showImgE = document.getElementById("showImg");
+            var fileUploadUrlE = document.getElementById("InputFileUploadUrl");
+            fileUploadUrlE.value = fileUploadUrlE.value + imgUrl + ";";
+            showImgE.innerHTML =   showImgE.innerHTML
+            +  '<div data-url="' + imgUrl + '" style="background-image:url(' + imgUrl + ');">'
+            +     '<span  style="background-color:white" class="removeImg glyphicon glyphicon-remove"></span>'
+            +  '</div>';
+        },
+    }
+    var FileUpload = new GVarFileUpload(data);
+    
+    function removeAImg(e){
+        var node = e.target.parentElement;
+        var urlStr = node.dataset.url + ";";
+        data.fileUploadUrlE.value = data.fileUploadUrlE.value.replace(urlStr, "");
+        node.remove();
+    }
+    var removeImgs = document.querySelectorAll(".removeImg");
+    for(var i=0; i < removeImgs.length; i++){
+        removeImgs[i].onclick = removeAImg;
+    }
+</script>
+
+<script>
+	var submitEditE = document.getElementById("submitEdit");
+	submitEditE.onclick = function (){
+		var submitEditInfoE = document.getElementById("submitEditInfo");
+		submitEditE.disabled = true;
+		submitEditInfoE.innerText = "提交中...";
+		var dataObj = {
+            Name:           document.getElementById("Name").value,
+            TypeId:         document.getElementById("TypeId").value,
+            Introduction:   document.getElementById("Introduction").value,
+            Contacts:       document.getElementById("Contacts").value,
+            Phone:          document.getElementById("Phone").value,
+            Address:        document.getElementById("Address").value,
+            ImgsUrl:        document.getElementById("InputFileUploadUrl").value
+		};
+		var dataStr = JSON.stringify(dataObj);
+		var url = "/COUNTY_SPELLING/Home/Api/AddAService/";
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST",url);
+		xhr.send(dataStr);
+		xhr.onreadystatechange = function (e) {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+                var responseObj = JSON.parse(xhr.responseText);
+                if(responseObj.status == "success"){
+                    submitEditInfoE.innerText = "提交成功，将跳转到服务显示页面";
+                    window.location.href = "/COUNTY_SPELLING/Home/Service/DisplayAService/" + responseObj.newServiceId;
+                }else{
+                    submitEditInfoE.innerText = "发生错误";
+                }
+			}
+		};
+	}
+</script>
+
+<include file="../../Common/View/Public/Footer" /> 

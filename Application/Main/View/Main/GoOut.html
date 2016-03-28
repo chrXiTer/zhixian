@@ -1,0 +1,72 @@
+<include file="../../Common/View/Public/Header" title="外出" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<h2>请选择要去的地方</h2>
+<div style="margin-top:5px">
+  省份：
+  <div id="provinceList" class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">湖南</button>
+    <button type="button" class="btn btn-default">广东</button>
+  </div>
+</div>
+
+<div style="margin-top:5px">
+  地级市：
+  <div id="cityList" class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">长沙</button>
+    <button type="button" class="btn btn-default">衡阳</button>
+    <button type="button" class="btn btn-default">湘潭</button>
+    <button type="button" class="btn btn-default">株洲</button>
+  </div>
+</div>
+
+<div style="margin-top:5px">
+  县：
+  <div id="countyList" class="btn-group" role="group" aria-label="...">
+    <a class="btn btn-default" href="http://zhixian001.applinzi.com/Main/Main/GoOut">衡阳</a>
+    <a class="btn btn-default" href="http://zhixian001.applinzi.com/Main/Main/GoOut">衡南</a>
+  </div>
+
+</div>
+
+<script>
+  var allCountysJson = {$viewData.allCountysJson};
+  var existedCountys= {$viewData.existedCountysJson};
+  
+  var typeItemIdStr = ["provinceList", "cityList", "countyList", ]
+  var Obj = [{"nnn":allCountysJson}, null, null , null];
+  function itemSelectedFunc(index, nameAtParenter){
+    var ListE = document.getElementById(typeItemIdStr[index]);
+    var htmlStr = "";
+    Obj[index + 1] = Obj[index][nameAtParenter];
+    for(var key in Obj[index + 1]){
+      var itemStr;
+      if(index < 2){ /* 省、市 */
+        var funcStr = 'onclick="itemSelectedFunc(' + (index + 1) + ', \''+ key + '\')"';
+        itemStr = '<button ' + funcStr +' type="button" class="btn btn-default">'+ key + '</button>';
+      }else if(index == 2){ /* 县 */
+        if(existedCountys["cx_x_" + Obj[index + 1][key] + "_service"] != undefined){
+          itemStr = '<a class="btn btn-success" href="/' 
+                    + Obj[index + 1][key] + '/Home/Main/GoOut">'+ key + '</a>';
+        }else{
+          itemStr = '<a class="btn btn-default" href="/Home/Main/StartACounty/'
+                    + Obj[index + 1][key] + '">'+ key + '</a>'; 
+        }        
+      }
+      htmlStr = htmlStr + itemStr;
+    } 
+    ListE.innerHTML = htmlStr;
+    if(index == 1){
+      document.getElementById("cityList").firstElementChild.click();
+    }
+  }
+  
+  itemSelectedFunc(0, "nnn");
+  document.getElementById("provinceList").firstElementChild.click();
+  document.getElementById("cityList").firstElementChild.click();
+
+</script>
+
+
+<br/>
+<include file="../../Common/View/Public/Footer" /> 

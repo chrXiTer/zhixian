@@ -1,0 +1,38 @@
+<include file="../../Common/View/Public/Header" title="知县—娱乐-游戏" /> 
+<include file="../../Common/View/Public/Menu" /> 
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title">
+			所有百科条目
+			<a style="float:right" href="/COUNTY_SPELLING/Home/Baike/AddAEntry">添加一个条目</a>
+		</h2>
+	</div>
+	
+	<p class="panel-body" id="entryList">
+	</p>
+</div>
+
+<script>
+	var dataArray = {$data};
+	var strTp = '<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Baike/DisplayAEntry/###entryId###">\n\
+					<span class="label label-success">###entryTitle###</span>\n\
+				</a>\n';
+	;(function(){
+		var str = "";
+		var entryListE = document.getElementById("entryList");
+		dataArray.map(function(item){
+			try{
+				var strTmp = strTp
+					.replace("###entryId###", item.id)
+					.replace("###entryTitle###", item.title);
+			}catch(e){
+				var dd = e;
+			}
+			str = str + strTmp;
+		});
+		entryListE.innerHTML = str;
+	})();
+</script>
+
+<include file="../../Common/View/Public/Footer" />

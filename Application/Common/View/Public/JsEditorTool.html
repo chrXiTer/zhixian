@@ -1,0 +1,31 @@
+<script>
+function GVarEditorTool(){
+    //保存输入框中被选择块的位置     
+    this.savePosition = function(richEditor){   
+        var selection = window.getSelection ();  
+        if (selection.rangeCount > 0){  
+            richEditor.rangeOld = selection.getRangeAt(0);  
+        }
+    };
+    
+    //在输入框被选择块结尾插入内容
+    var self = this;  
+    this.insertHtmlAtSelectionEnd = function(htmlStr, richEditor){  
+        if(!richEditor.rangeOld){
+            richEditor.focus();
+            self.savePosition(richEditor);
+        }
+
+        var range = richEditor.rangeOld;
+        var fragment = range.createContextualFragment(htmlStr);
+        var lastNode = fragment.lastChild;
+        range.insertNode(fragment);
+        //插入后把开始和结束位置都放到lastNode后面, 然后添加到selection
+        range.setEndAfter(lastNode);
+        range.setStartAfter(lastNode);
+        var selection = window.getSelection (); 
+        selection.removeAllRanges();
+        selection.addRange(range);
+    };
+}
+</script>

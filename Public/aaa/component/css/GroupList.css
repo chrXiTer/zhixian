@@ -1,0 +1,45 @@
+ul.chrx-group-list{
+    margin:0;
+    padding-left:2px;
+    float:left;
+    clear: none;
+}
+
+ul.chrx-group-list li{
+    list-style: none;
+    font-size:16px;
+    line-height: 30px;
+}
+
+ul.chrx-group-list li a{
+    text-decoration: none;
+    color: #666;
+}
+
+ul.chrx-group-list li a:hover{
+    text-decoration:underline;
+}
+
+
+
+/*  */
+ul.chrx-group-list li img{
+    float:left;
+    width:55px;
+    height:55px;
+    margin:3px 5px 3px 3px; 
+}
+
+ul.chrx-group-list li h3{
+    font-size: 16px;
+    line-height: 24px;
+    margin: 1px;
+}
+
+ul.chrx-group-list li p{
+    font-size: 14px;
+    line-height: 16px;
+    margin: 1px;
+    color: #999;
+}
+

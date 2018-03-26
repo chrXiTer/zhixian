@@ -17,7 +17,7 @@ class NeedController extends Controller {
         $currentUser = AccountTool::getCurrentUser();
         if($currentUser === NULL){ 
             $returnUrl = $_SERVER['PATH_INFO'];
-            $this->error("您还未登录，情先登陆", '/'.COUNTY_SPELLING."/Home/Account/Login?returnUrl=$returnUrl",3);
+            $this->error("您还未登录，情先登陆", '/'."/Home/Account/Login?returnUrl=$returnUrl",3);
         }
         $this->PublisherId = $currentUser["id"];
         if (IS_GET){

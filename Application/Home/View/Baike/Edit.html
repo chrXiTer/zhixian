@@ -9,7 +9,7 @@
 		style="border-top-style:dotted;border-top-width:1px;border-bottom-style:dotted;border-bottom-width:1px">
 		{$data.content}
 	</div>
-	<a class="btn btn-default" href="/COUNTY_SPELLING/Home/Baike/index.html" role="button">取消</a>
+	<a class="btn btn-default" href="/Home/Baike/index.html" role="button">取消</a>
 	<button id="submitEdit" type="button" class="btn btn-default">提交</button>
 	<span id="submitEditInfo"></span>
 </div>
@@ -29,7 +29,7 @@
 			entryId:entryId
 		}
 		var dataStr = JSON.stringify(dataObj);
-		var url = "/COUNTY_SPELLING/Home/Api/EditBaike/"+ entryId;
+		var url = "/Home/Api/EditBaike/"+ entryId;
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST",url);
 		xhr.send(dataStr);
@@ -38,7 +38,7 @@
 				var responseObj = JSON.parse(xhr.responseText);
 				if(responseObj.status == "success"){
 					submitEditInfoE.innerText = "提交成功，将跳转到该词条";
-					window.location.href = "/COUNTY_SPELLING/Home/Baike/index/"+ entryId;
+					window.location.href = "/Home/Baike/index/"+ entryId;
 				}else{
 					submitEditInfoE.innerText = "发生错误";
 				}

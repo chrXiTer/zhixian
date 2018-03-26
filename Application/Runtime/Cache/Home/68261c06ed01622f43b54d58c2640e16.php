@@ -1,3 +1,13 @@
+<?php if (!defined('THINK_PATH')) exit();?><html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>知县 - 注册</title>
+        <link rel="stylesheet" href="/Public/bootstrap335/css/bootstrap.css" />
+        <link rel="stylesheet" href="/Public/css/site.css" />
+    </head>
+    <body>
+        <div class="container body-content"> 
 <div id="chrx-menu" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -19,7 +29,7 @@
                 <li><a class="navbar-brand" style="font-size:12px" href="/Home/News">本地分享</a></li>
                 <li><a class="navbar-brand" style="font-size:12px" href="/Home/Baike">本地百科</a></li>
             </ul>
-            <include file="../../Home/View/Public/Login"/>
+            
         </div>
     </div>
 </div>
@@ -34,8 +44,21 @@ function isWeiXin(){
     }
 }
 var goBackE = document.getElementById("goBack");
-if(isWeiXin()){//在微信中需要显示放回箭头，并调整右边间隙。
-    goBackE.style.display="";  //不在微信中则不显示。
-    goBackE.style.paddingRight="0px";     
-}
-</script>
+if(isWeiXin())
+</script> 
+        <form id="formRegister" method="post" style="margin: 0 auto; padding:10">
+            用户名：<input id ="UserName" name="UserName" type="text" maxlength="30" /><br/><br/>
+            密　码：<input id ="Password" name="Password" type="text" maxlength="30" /><br/><br/>
+            <a href="/Home/Account/Login?returnUrl=/Home/Account/Register?returnUrl=/Home/Account/Login?returnUrl=/Home/News" style="margin-left: 10px;">登录</a>
+            <button type="submit" class="btn btn-default" style="margin-left: 80px;">注册</button>
+            <span id="loginTips"></span>
+        </form>
+    </div><!--class="container body-content" -->
+    <footer class="container body-content">
+        <p>&copy; 2015 - 知县</p>
+    </footer>
+
+    <script src="/Public/jquery/jquery.js"></script>
+    <script src="/Public/bootstrap335/js/bootstrap.js"></script>
+</body>
+</html>

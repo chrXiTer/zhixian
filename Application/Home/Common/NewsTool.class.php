@@ -6,7 +6,7 @@ use Common\Common\AccountTool;
 class NewsTool{
 	static private function getANewsById($newsId){
 		$newsId = (int)$newsId;
-		$newsM = M('x_'.COUNTY_SPELLING."_news");
+		$newsM = M("x_news");
 		$result = $newsM->where("id=$newsId")->select();
 		if($result === false){//数据库查询发生错误
             return null;
@@ -21,13 +21,13 @@ class NewsTool{
 ///
 ////////////////////////	
 	static public function getAllNews(){
-		$newsM = M('x_'.COUNTY_SPELLING."_news");
+		$newsM = M("x_news");
 		$result = $newsM->select();
 		return $result;
 	}
 	
 	static public function getAllNewsFromCurrentUser(){
-		$newsM = M('x_'.COUNTY_SPELLING."_news");
+		$newsM = M("x_news");
 		$currentUser = AccountTool::getCurrentUser();
 		$result = $newsM->where('PublisherId = '.$currentUser["id"])->select();
 		return $result;
@@ -46,7 +46,7 @@ class NewsTool{
 	static public function AddANews($title, $content){
 		$currentUser = AccountTool::getCurrentUser();
 
-		$newsM = M('x_'.COUNTY_SPELLING."_news");
+		$newsM = M("x_news");
         $data["Title"] = $title;
 		$data["Content"] = $content;
 		$data["PublisherId"] = $currentUser["id"];
@@ -56,7 +56,7 @@ class NewsTool{
 	
 	static public function DeleteANewsById($newsId){
 		$newsId = (int)$newsId;
-		$newsM = M('x_'.COUNTY_SPELLING."_news");
+		$newsM = M("x_news");
 		$result = $newsM->where('Id='.$newsId)->delete();
 		return $result;
 	}

@@ -17,7 +17,7 @@ function GRemoveSAN(){
 
 	function removeAItem(idInt, calledActionInUrl){	
 		var xhr = new XMLHttpRequest();
-		xhr.open("POST", "/COUNTY_SPELLING/Home/Api/" + calledActionInUrl + "/" + idInt);
+		xhr.open("POST", "/Home/Api/" + calledActionInUrl + "/" + idInt);
 		xhr.send('{"id": "'+ idInt +'"}');
 		xhr.onload = function(e){
 			var responseObj = JSON.parse(xhr.responseText);

@@ -1,6 +1,6 @@
 <?php
 $sql = array(
-  $sqlCreateTable_affair => "CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_affair` (
+  $sqlCreateTable_affair => "CREATE TABLE IF NOT EXISTS `cx_x_affair` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `ParentId` int(11) NOT NULL DEFAULT '0',
     `Name` varchar(100) NOT NULL,
@@ -10,7 +10,7 @@ $sql = array(
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
   
-  $sqlCreateTable_affairComment => "CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_affair_comment` (
+  $sqlCreateTable_affairComment => "CREATE TABLE IF NOT EXISTS `cx_x_affair_comment` (
     `Id` int(11) NOT NULL,
     `AuthorId` int(11) NOT NULL,
     `AffairId` int(11) NOT NULL,
@@ -19,7 +19,7 @@ $sql = array(
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM DEFAULT CHARSET=utf8;",
   
-  $sqlCreateTable_affairServiceType => "CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_affair_service_type` (
+  $sqlCreateTable_affairServiceType => "CREATE TABLE IF NOT EXISTS `cx_x_affair_service_type` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `AffairId` int(11) NOT NULL,
     `ServiceTypeId` int(11) NOT NULL,
@@ -27,7 +27,7 @@ $sql = array(
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
 
-  $sqlCreateTable_baike =>"CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_baike` (
+  $sqlCreateTable_baike =>"CREATE TABLE IF NOT EXISTS `cx_x_baike` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `title` varchar(50) NOT NULL,
     `content` text NOT NULL,
@@ -35,7 +35,7 @@ $sql = array(
     PRIMARY KEY (`id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
   
-  $sqlCreateTable_need =>"CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_need` (
+  $sqlCreateTable_need =>"CREATE TABLE IF NOT EXISTS `cx_x_need` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `Title` varchar(50) NOT NULL,
     `Introduction` varchar(200) NOT NULL,
@@ -45,7 +45,7 @@ $sql = array(
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
   
-  $sqlCreateTable_needComment =>"CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_need_comment` (
+  $sqlCreateTable_needComment =>"CREATE TABLE IF NOT EXISTS `cx_x_need_comment` (
     `Id` int(11) NOT NULL,
     `AuthorId` int(11) NOT NULL,
     `NeedId` int(11) NOT NULL,
@@ -54,7 +54,7 @@ $sql = array(
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM DEFAULT CHARSET=utf8;",
   
-  $sqlCreateTable_service =>"CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_service` (
+  $sqlCreateTable_service =>"CREATE TABLE IF NOT EXISTS `cx_x_service` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `PublisherId` int(11) NOT NULL,
     `TypeId` int(11) NOT NULL DEFAULT '0',
@@ -68,7 +68,7 @@ $sql = array(
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;",
   
-  $sqlCreateTable_serviceComment =>"CREATE TABLE IF NOT EXISTS `cx_x_".COUNTY_SPELLING."_service_comment` (
+  $sqlCreateTable_serviceComment =>"CREATE TABLE IF NOT EXISTS `cx_x_service_comment` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `AuthorId` int(11) NOT NULL,
     `ServiceId` int(11) NOT NULL,

@@ -1,4 +1,4 @@
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_affair` (
+  CREATE TABLE IF NOT EXISTS `cx_x_affair` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `ParentId` int(11) NOT NULL DEFAULT '0',
     `Name` varchar(100) NOT NULL,
@@ -8,7 +8,7 @@
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
   
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_affair_comment` (
+  CREATE TABLE IF NOT EXISTS `cx_x_affair_comment` (
     `Id` int(11) NOT NULL,
     `AuthorId` int(11) NOT NULL,
     `AffairId` int(11) NOT NULL,
@@ -17,7 +17,7 @@
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
   
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_affair_service_type` (
+  CREATE TABLE IF NOT EXISTS `cx_x_affair_service_type` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `AffairId` int(11) NOT NULL,
     `ServiceTypeId` int(11) NOT NULL,
@@ -25,7 +25,7 @@
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_baike` (
+  CREATE TABLE IF NOT EXISTS `cx_x_baike` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `EditorId` int(11) NOT NULL,
     `Version` int(11) NOT NULL,
@@ -36,7 +36,7 @@
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
   
   
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_baike_history` (
+  CREATE TABLE IF NOT EXISTS `cx_x_baike_history` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `BaikeId` int(11) NOT NULL,
   `Version` int(11) NOT NULL,
@@ -47,7 +47,7 @@
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_need` (
+  CREATE TABLE IF NOT EXISTS `cx_x_need` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `Title` varchar(50) NOT NULL,
     `Introduction` varchar(200) NOT NULL,
@@ -57,7 +57,7 @@
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_need_comment` (
+  CREATE TABLE IF NOT EXISTS `cx_x_need_comment` (
     `Id` int(11) NOT NULL,
     `AuthorId` int(11) NOT NULL,
     `NeedId` int(11) NOT NULL,
@@ -66,7 +66,7 @@
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_service` (
+  CREATE TABLE IF NOT EXISTS `cx_x_service` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `PublisherId` int(11) NOT NULL,
     `TypeId` int(11) NOT NULL DEFAULT '0',
@@ -80,7 +80,7 @@
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_service_comment` (
+  CREATE TABLE IF NOT EXISTS `cx_x_service_comment` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `AuthorId` int(11) NOT NULL,
     `ServiceId` int(11) NOT NULL,
@@ -93,13 +93,14 @@
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `Username` varchar(100) NOT NULL DEFAULT '',
     `Realname` varchar(100) NOT NULL DEFAULT '',
+    `Password` varchar(100) NOT NULL DEFAULT '',
     `Phone` varchar(100) NOT NULL DEFAULT '',
     `Role` varchar(100) NOT NULL DEFAULT 'user', # admin
     PRIMARY KEY (`Id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
   
   
-  CREATE TABLE IF NOT EXISTS `cx_x_hengyangxian_news` (
+  CREATE TABLE IF NOT EXISTS `cx_x_news` (
     `Id` int(11) NOT NULL AUTO_INCREMENT,
     `PublisherId` int(11) NOT NULL,
     `Title` varchar(100) NOT NULL DEFAULT '',

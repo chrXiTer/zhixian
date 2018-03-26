@@ -24,11 +24,11 @@ class ServiceTool{
             SELECT c.* , u1.UserName AS Author, u2.UserName AS PreCommentName
             FROM (       
                 SELECT * 
-                FROM cx_x_'.COUNTY_SPELLING.'_service_comment
+                FROM cx_x_service_comment
                 WHERE ServiceId = '.$serviceId.'
             ) AS c
-            INNER JOIN cx_user AS u1 ON u1.Id = c.AuthorId
-            LEFT JOIN cx_user AS u2 ON u2.Id = c.PreCommentId
+            INNER JOIN cx_x_user AS u1 ON u1.Id = c.AuthorId
+            LEFT JOIN cx_x_user AS u2 ON u2.Id = c.PreCommentId
         ');
         return $result;
     }
@@ -37,14 +37,14 @@ class ServiceTool{
     ////////
     ////////////////////////
 	static public function getAllServices(){
-		$serviceM = M('x_'.COUNTY_SPELLING."_service");
+		$serviceM = M("x_service");
         $services = $serviceM->select();
 		return $services;
 	}
     
     static public function getServiceById($id){
         $id = (int)$id;
-        $Service = M('x_'.COUNTY_SPELLING."_service");
+        $Service = M("x_service");
         $result = $Service->where("id=".$id)->select();
         if($result === false){//数据库查询发生错误
             return null;
@@ -69,13 +69,13 @@ class ServiceTool{
     }
 
     static public function DeleteAServiceById($serviceId){
-		$serviceM = M('x_'.COUNTY_SPELLING."_service");
+		$serviceM = M("x_service");
 		$result = $serviceM->where('Id='.$serviceId)->delete();
 		return $result;
 	}
 
     static public function UpdataAService($entryId, $newData){
-		$serviceM = M('x_'.COUNTY_SPELLING."_service");
+		$serviceM = M("x_service");
 		$dataOld = $serviceM->where("id=$entryId")->select();
 		$dataOld = $dataOld[0];
 		
@@ -87,7 +87,7 @@ class ServiceTool{
         $dataToHistory['Address'] = $dataOld['address'];
         $dataToHistory['ImgsUrl'] = $dataOld['imgsurl'];
         
-		$serviceHistoryM = M('x_'.COUNTY_SPELLING."_service_history");
+		$serviceHistoryM = M("x_service_history");
 		$result_1 = $serviceHistoryM->add($dataToHistory);
         
         $data['Name'] = $newData['Name'];
@@ -111,7 +111,7 @@ class ServiceTool{
 ////////
 ////////////////////////
 	static public function getAllServiceTypes($orderStr = null, $whereStr = null){
-        $ServiceType = M('x_'.COUNTY_SPELLING."_service_type");
+        $ServiceType = M("x_service_type");
         $result = $ServiceType;
         if(!empty($whereStr)){
             $result = $ServiceType->where($whereStr);
@@ -159,7 +159,7 @@ class ServiceTool{
     
     static public function getAServiceType($typeId){
         $typeId = (int)$typeId;
-        $serviceTypeM = M('x_'.COUNTY_SPELLING."_service_type");
+        $serviceTypeM = M("x_service_type");
         $result = $serviceTypeM->where("id=".$typeId)->select();
         if($result === false){
            // 数据库查询发生错误

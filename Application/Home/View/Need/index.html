@@ -12,7 +12,7 @@
 	<div class="panel-heading">
 		<h2 class="panel-title">
 			所有需求
-			<a style="float:right" href="/COUNTY_SPELLING/Home/Need/AddANeed">发布需求</a>
+			<a style="float:right" href="/Home/Need/AddANeed">发布需求</a>
 			<?php if($currentUserIsAdmin){ ?>
 				<a id="managmentItem" style="float:right;margin-right:6px" href="#">管理</a>
 			<?php } ?>
@@ -21,7 +21,7 @@
 	<p class="panel-body">
 		<foreach name="needs" item="vo">
 			<span>
-				<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Need/DisplayANeed/{$vo.id}">
+				<a style＝"margin:3px 9px 3px 9px;" href="/Home/Need/DisplayANeed/{$vo.id}">
 					<span class="label label-success">{$vo.title}</span>
 				</a>
 				<span class="glyphicon glyphicon-remove remove-flag" id="removeFlag{$vo.id}"></span>

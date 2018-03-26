@@ -56,13 +56,13 @@ class ApiController extends Controller {
     
     public function GetAAffair(){
         $affairId = (int)I("path.2");
-        $affairM = M('x_'.COUNTY_SPELLING."_Affair");
+        $affairM = M("x_Affair");
         $affair = $affairM->where("id=".$affairId)->select()[0];
 		
 		$Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
 		$neededServiceTypes = $Model->query(
 			"SELECT * FROM cx_service_type WHERE id IN "
-				."(SELECT serviceTypeId FROM cx_x_".COUNTY_SPELLING."_affair_service_type WHERE affairId =".$affairId.")"
+				."(SELECT serviceTypeId FROM cx_x_affair_service_type WHERE affairId =".$affairId.")"
 		);
         $resultJsonStr = json_encode(array(
             "affair"=>$affair,
@@ -89,8 +89,8 @@ class ApiController extends Controller {
     public function GetAServiceType(){
         $data = (object)null;
         $typeId = (int)I("path.2");
-        $serviceM = M('x_'.COUNTY_SPELLING."_service");
-        $serviceTypeM = M('x_'.COUNTY_SPELLING."_service_type");
+        $serviceM = M("x_service");
+        $serviceTypeM = M("x_service_type");
         
         $data->serviceType = ServiceTool::getAServiceType($typeId);
         $data->childrenServiceTypes = $serviceTypeM->where("ParentId=".$typeId)->select();
@@ -114,7 +114,7 @@ class ApiController extends Controller {
         }
         
         $postJsonStr = file_get_contents("php://input");
-        $serviceM = M('x_'.COUNTY_SPELLING.'_service');
+        $serviceM = M('x_service');
         $postObj = json_decode($postJsonStr);
         if($serviceM->data($postObj)){
             $serviceM->PublisherId = $currentUser["id"];
@@ -135,7 +135,7 @@ class ApiController extends Controller {
         
         $postJsonStr = file_get_contents("php://input");
         $postObj = json_decode($postJsonStr);
-        $NeedM = M('x_'.COUNTY_SPELLING.'_need');
+        $NeedM = M('x_need');
         if($NeedM->data($postObj)){
             $NeedM->PublisherId = $currentUser["id"];
             $newNeedId = $NeedM->add(); // 写入数据到数据库 
@@ -171,7 +171,7 @@ class ApiController extends Controller {
         $postJsonStr = file_get_contents("php://input");
         $postObj = json_decode($postJsonStr);
         if($postObj->commentContent){
-            $serviceCommentM = M('x_'.COUNTY_SPELLING."_service_comment");
+            $serviceCommentM = M("x_service_comment");
             $currentUser = AccountTool::getCurrentUser();
             $data["Content"] = $postObj->commentContent;
             $data["ServiceId"] = $postObj->serviceId;
@@ -195,7 +195,7 @@ class ApiController extends Controller {
         $postJsonStr = file_get_contents("php://input");
         $postObj = json_decode($postJsonStr);
         if($postObj->commentContent){
-            $serviceCommentM = M('x_'.COUNTY_SPELLING."_need_comment");
+            $serviceCommentM = M("x_need_comment");
             $currentUser = AccountTool::getCurrentUser();
             $data["Content"] = $postObj->commentContent;
             $data["NeedId"] = $postObj->needId;

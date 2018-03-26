@@ -21,7 +21,7 @@
     </p>
     <p>
         <label for="Address">需求求助发布者</label>
-        <a href="/COUNTY_SPELLING/Home/Account/Profile/{$publisher.username}">{$viewData.publisher.username}</a>
+        <a href="/Home/Account/Profile/{$publisher.username}">{$viewData.publisher.username}</a>
     </p>
     
     <div class="alert alert-success" role="alert"></div>
@@ -40,7 +40,6 @@
         </form>
         <include file="../../Common/View/Public/SubmitFormJs" />
         <script>
-        var countySpelling = COUNTY_SPELLING;  /* PHP 模版替换 */
         var needId = {$viewData.need.id}; /* PHP 模版替换 */
         document.getElementById("submitComment").onclick = function(){
             var data = JSON.stringify({
@@ -55,7 +54,7 @@
                     document.getElementById("allComment").appendChild(newCommentNode);
                 }
             }
-            AjaxSubmitForm("/" + countySpelling +"/Home/Api/AddACommentInNeed", data, callbackOnSuccess);
+            AjaxSubmitForm("/Home/Api/AddACommentInNeed", data, callbackOnSuccess);
         }
         </script>
     </div>

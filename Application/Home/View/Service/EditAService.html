@@ -23,7 +23,7 @@
             <label for="TypeId">服务类别</label>
             <select id="TypeId" name="TypeId">
             </select>
-            <a href="/COUNTY_SPELLING/Home/Service/AddAServiceType">申请添加一个类型</a>
+            <a href="/Home/Service/AddAServiceType">申请添加一个类型</a>
         </div>
         <div class="form-group">
             <label for="Introduction">介绍</label>
@@ -136,7 +136,7 @@
             ImgsUrl:        document.getElementById("InputFileUploadUrl").value
 		};
 		var dataStr = JSON.stringify(dataObj);
-		var url = "/COUNTY_SPELLING/Home/Api/EditAService/"+ serviceId;
+		var url = "/Home/Api/EditAService/"+ serviceId;
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST",url);
 		xhr.send(dataStr);
@@ -145,7 +145,7 @@
                 var responseObj = JSON.parse(xhr.responseText);
                 if(responseObj.status == "success"){
                     submitEditInfoE.innerText = "提交成功，将跳转到服务显示页面";
-                    window.location.href = "/COUNTY_SPELLING/Home/Service/DisplayAService/"  + serviceId;
+                    window.location.href = "/Home/Service/DisplayAService/"  + serviceId;
                 }else{
                     submitEditInfoE.innerText = "发生错误";
                 }

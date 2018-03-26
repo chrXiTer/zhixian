@@ -1,15 +1,16 @@
 <?php
 namespace Home\Common;
+use Common\Common\AccountTool;
 
 class BaikeTool{
 	static public function getAEntry($entryId){
-        $baikeM = M('x_'.COUNTY_SPELLING."_baike");
+        $baikeM = M("x_baike");
         $data = $baikeM->where("id=$entryId")->select();
 		return $data[0];
 	}
 	
 	static public function updataAEntry($entryId, $newData){
-		$baikeM = M('x_'.COUNTY_SPELLING."_baike");
+		$baikeM = M("x_baike");
 		$dataOld = $baikeM->where("id=$entryId")->select();
 		$dataOld = $dataOld[0];
 		
@@ -19,7 +20,7 @@ class BaikeTool{
 		$dataToHistory["Title"] = $dataOld["title"];
 		$dataToHistory["Content"] = $dataOld["content"];
         $dataToHistory["Type"] = $dataOld["type"];
-		$baikeHistoryM = M('x_'.COUNTY_SPELLING."_baike_history");
+		$baikeHistoryM = M("x_baike_history");
 		$result_1 = $baikeHistoryM->add($dataToHistory);
 		
 		$data["Titile"] = $newData["title"];
@@ -35,7 +36,7 @@ class BaikeTool{
 	}
 	
 	static public function getAllEntryForTitle(){
-		$baikeM = M('x_'.COUNTY_SPELLING."_baike");
+		$baikeM = M("x_baike");
 		$data = $baikeM->field('Id,Title,Type')->select();
 		return $data;
 	}
@@ -43,7 +44,7 @@ class BaikeTool{
 	static public function AddAEntry($title, $content){
 		$currentUser = AccountTool::getCurrentUser();
 
-		$baikeM = M('x_'.COUNTY_SPELLING."_baike");
+		$baikeM = M("x_baike");
         $data["Title"] = $title;
 		$data["Content"] = $content;
 		$data["EditorId"] = $currentUser["id"];

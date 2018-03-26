@@ -50,7 +50,7 @@
             Phone:          document.getElementById("Phone").value
 		};
 		var dataStr = JSON.stringify(dataObj);
-		var url = "/COUNTY_SPELLING/Home/Api/AddANeed/";
+		var url = "/Home/Api/AddANeed/";
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST",url);
 		xhr.send(dataStr);
@@ -59,7 +59,7 @@
                 var responseObj = JSON.parse(xhr.responseText);
                 if(responseObj.status == "success"){
                     submitEditInfoE.innerText = "提交成功，将跳转到服务显示页面";
-                    window.location.href = "/COUNTY_SPELLING/Home/Need/DisplayANeed/" + responseObj.newNeedId;
+                    window.location.href = "/Home/Need/DisplayANeed/" + responseObj.newNeedId;
                 }else{
                     submitEditInfoE.innerText = "发生错误";
                 }

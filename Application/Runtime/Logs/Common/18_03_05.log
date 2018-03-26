@@ -1,0 +1,651 @@
+[ 2018-03-05T02:26:37+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000127s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:26:45+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:28:41+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:30:22+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:34:24+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:34:28+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:34:59+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:35:38+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:39:50+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:40:15+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:45:04+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T02:45:24+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T03:14:54+08:00 ] 192.168.147.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Favicon
+
+[ 2018-03-05T04:23:14+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:23:25+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:23:29+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:24:49+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:25:06+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:25:07+08:00 ] 192.168.147.1 /hengyangxian/Home/Main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:25:20+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:25:35+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:25:36+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:25:44+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:26:02+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:27:03+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:27:32+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:27:34+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+NOTIC: [8] Array to string conversion /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 32 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:28:14+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:28:18+08:00 ] 192.168.147.1 /hengyangxian/Home/Main/Navigation
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:28:25+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T04:28:37+08:00 ] 192.168.147.1 /hengyangxian/Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:31:34+08:00 ] 192.168.147.1 /hengyangxian/Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:35:26+08:00 ] 192.168.147.1 /hengyangxian/Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:35:37+08:00 ] 192.168.147.1 /hengyangxian/Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:37:00+08:00 ] 192.168.147.1 /hengyangxian/Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:38:24+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:46:10+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:47:42+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:49:21+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:49:52+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+NOTIC: [8] Use of undefined constant BIND_MODULE - assumed 'BIND_MODULE' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 143 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:50:17+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:50:22+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:50:46+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:50:51+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:51:19+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Use of undefined constant BIND_MODULE - assumed 'BIND_MODULE' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 143 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:51:35+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:52:02+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Use of undefined constant BIND_MODULE - assumed 'BIND_MODULE' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 143 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:53:04+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Use of undefined constant BIND_MODULE - assumed 'BIND_MODULE' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 143 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:53:42+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000198s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:56:10+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:57:34+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T04:57:53+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+ERR: 无法加载模块:Hengyang
+
+[ 2018-03-05T05:00:16+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+ERR: 无法加载模块:Hengyang
+
+[ 2018-03-05T05:02:23+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+ERR: 无法加载模块:Hengyang
+
+[ 2018-03-05T05:04:02+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyang
+
+[ 2018-03-05T05:08:31+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyang
+
+[ 2018-03-05T05:09:15+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyang
+
+[ 2018-03-05T05:09:26+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T05:10:05+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T05:11:13+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T05:12:19+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T05:13:30+08:00 ] 192.168.147.1 /Home/Baike
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:S=
+
+[ 2018-03-05T05:16:46+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:16:58+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:17:38+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:17:50+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:17:55+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:17:56+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:18:03+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:18:23+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:18:35+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:19:18+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:22:37+08:00 ] 192.168.147.1 /hengyangxian/Home/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Hengyangxian
+
+[ 2018-03-05T05:35:21+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:24+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:26+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:27+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:28+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:29+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:30+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:31+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:33+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:33+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:35+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:35:40+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:36:00+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:36:03+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+NOTIC: [8] Use of undefined constant MODULE_NAME - assumed 'MODULE_NAME' /data/zhixian-o/ThinkPHP/Library/Think/Dispatcher.class.php 第 139 行.
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:18+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:35+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:37+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:38+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:40+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:41+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:43+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:44+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:45+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001086s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:46+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:50+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-05T05:38:51+08:00 ] 192.168.147.1 /Public/bootstrap335/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+ERR: 无法加载模块:Public
+

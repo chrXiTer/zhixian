@@ -22,7 +22,7 @@ class ServiceController extends Controller {
         $currentUser = AccountTool::getCurrentUser();
         if($currentUser === NULL){ 
             $returnUrl = $_SERVER['PATH_INFO'];
-            $this->error("您还未登录，情先登陆", '/'.COUNTY_SPELLING."/Home/Account/Login?returnUrl=$returnUrl",3);
+            $this->error("您还未登录，情先登陆", '/'."/Home/Account/Login?returnUrl=$returnUrl",3);
             return;
         }
         if (IS_GET){
@@ -39,7 +39,7 @@ class ServiceController extends Controller {
         if(IS_GET){
             $viewData = ServiceTool::getAServiceToEdite($_id);
             if(!$viewData["isMyself"]){
-                redirect('/'.COUNTY_SPELLING."/Home/Service/DisplayAService", 2, "只有信息发布者才可以编辑");
+                redirect('/'."/Home/Service/DisplayAService", 2, "只有信息发布者才可以编辑");
                 return;
             }
             $this->viewData = $viewData;
@@ -54,8 +54,8 @@ class ServiceController extends Controller {
     /////////////////////////////////////
     public function DisplayAServiceType(){
         $typeId = (int)I("path.2");
-        $serviceM = M('x_'.COUNTY_SPELLING."_service");
-        $serviceTypeM = M('x_'.COUNTY_SPELLING."_service_type");
+        $serviceM = M("x_service");
+        $serviceTypeM = M("x_service_type");
         $this->serviceType = ServiceTool::getAServiceType($typeId);
         $this->childrenServiceTypes = $serviceTypeM->where("ParentId=".$typeId)->select();
         $this->childrenServices = $serviceM->where("TypeId=".$typeId)->select();
@@ -70,14 +70,14 @@ class ServiceController extends Controller {
             $this->serviceTypesHasStoped = ServiceTool::getServiceTypesHasStoped($this->allServiceTypes);
             $this->display();
         }else if(IS_POST){
-            $serviceType = M('x_'.COUNTY_SPELLING.'_service_type');
+            $serviceType = M('x_service_type');
             if($serviceType->create()){
                 $result = $serviceType->add(); // 写入数据到数据库 
                 if($result){
                     $insertId = $result;// 如果主键是自动增长型 成功后返回值就是最新插入的值
-                    redirect('/'.COUNTY_SPELLING."/Home/Service/",2,"申请添加类型成功");
+                    redirect('/'."/Home/Service/",2,"申请添加类型成功");
                 }else {
-                    redirect('/'.COUNTY_SPELLING."/Home/Service/",2,"没有要申请添加的类型");
+                    redirect('/'."/Home/Service/",2,"没有要申请添加的类型");
                 }
             }
         }

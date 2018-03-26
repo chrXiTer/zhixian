@@ -51,11 +51,11 @@ document.getElementsByTagName('head')[0].appendChild(script);
 	</div>
 	<p class="panel-body">
     	<foreach name="affair_hot" item="vo">
-		<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Affair/DisplayAAffair/{$vo.id}">
+		<a style＝"margin:3px 9px 3px 9px;" href="/Home/Affair/DisplayAAffair/{$vo.id}">
 			<span class="label label-success">{$vo.name}</span>
 		</a>
 		</foreach>
-		<a href="/COUNTY_SPELLING/Home/Affair"><span class="label label-info">更多事项>></span></a>
+		<a href="/Home/Affair"><span class="label label-info">更多事项>></span></a>
 	</p>
 </div>
 
@@ -63,16 +63,16 @@ document.getElementsByTagName('head')[0].appendChild(script);
 	<div class="panel-heading">
 		<h3 class="panel-title">
 			服务大全
-			<a style="float:right" href="/COUNTY_SPELLING/Home/Service/AddAService">发布服务</a>
+			<a style="float:right" href="/Home/Service/AddAService">发布服务</a>
 			</h3>
 	</div>
 	<p class="panel-body">
 		<foreach name="services_hot" item="vo">
-			<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Service/DisplayAService/{$vo.id}">
+			<a style＝"margin:3px 9px 3px 9px;" href="/Home/Service/DisplayAService/{$vo.id}">
 				<span class="label label-success">{$vo.name}</span>
 			</a>
 		</foreach>
-		<a href="/COUNTY_SPELLING/Home/Service"><span class="label label-info">更多服务>></span></a>
+		<a href="/Home/Service"><span class="label label-info">更多服务>></span></a>
 	</p>
 </div>
 
@@ -80,16 +80,16 @@ document.getElementsByTagName('head')[0].appendChild(script);
 	<div class="panel-heading">
 		<h3 class="panel-title">
 			需求求助
-			<a style="float:right" href="/COUNTY_SPELLING/Home/Need/AddANeed">发布需求</a>
+			<a style="float:right" href="/Home/Need/AddANeed">发布需求</a>
 		</h3>
 	</div>
 	<p class="panel-body">
 		<foreach name="needs_hot" item="vo">
-			<a style＝"margin:3px 9px 3px 9px;" href="/COUNTY_SPELLING/Home/Need/DisplayANeed/{$vo.id}">
+			<a style＝"margin:3px 9px 3px 9px;" href="/Home/Need/DisplayANeed/{$vo.id}">
 				<span class="label label-success">{$vo.title}</span>
 			</a>
 		</foreach>
-		<a href="/COUNTY_SPELLING/Home/Need"><span class="label label-info">更多需求求助>></span></a>
+		<a href="/Home/Need"><span class="label label-info">更多需求求助>></span></a>
 	</p>
 </div>
 

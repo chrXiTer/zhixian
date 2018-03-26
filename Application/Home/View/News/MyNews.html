@@ -9,7 +9,7 @@
 		<?php foreach($newsList as $index => $news){
 				$classStr = "list-group-item-default" /*($index / 2 == 0)? "list-group-item-info" : "list-group-item-warning" */ ?>			
 			<li class="list-group-item {$classStr}">
-				<a href="/COUNTY_SPELLING/Home/News/DisplayANews/{$news.id}">{$news.title}</a>
+				<a href="/Home/News/DisplayANews/{$news.id}">{$news.title}</a>
 			</li>
 		<?php } ?>
 		</ul>

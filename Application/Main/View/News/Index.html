@@ -13,11 +13,11 @@
 		<h2 class="panel-title">
 			新鲜分享
 			<?php if($isLogin){ ?>
-				<a style="float:right" href="/COUNTY_SPELLING/Home/News/MyNews">我的分享</a>
-				<a style="float:right;margin-right:6px" href="/COUNTY_SPELLING/Home/News/AddANews">添加分享</a>
+				<a style="float:right" href="/Home/News/MyNews">我的分享</a>
+				<a style="float:right;margin-right:6px" href="/Home/News/AddANews">添加分享</a>
 				<a id="managmentItem" style="float:right;margin-right:6px" href="#">管理</a>
 			<?php }else{ ?>
-				<a style="float:right" href="/Home/Account/Login?returnUrl=/COUNTY_SPELLING/Home/News">登录后可添加分享</a>
+				<a style="float:right" href="/Home/Account/Login?returnUrl=/Home/News">登录后可添加分享</a>
 			<?php } ?>
 		</h2>
 	</div>
@@ -25,7 +25,7 @@
 	<?php foreach($newsList as $index => $news){
 			$classStr = "list-group-item-default" /*($index / 2 == 0)? "list-group-item-info" : "list-group-item-warning" */ ?>			
 		<li class="list-group-item {$classStr}">
-			<a href="/COUNTY_SPELLING/Home/News/DisplayANews/{$news.id}">{$news.title}</a>
+			<a href="/Home/News/DisplayANews/{$news.id}">{$news.title}</a>
 			<span class="glyphicon glyphicon-remove remove-flag" id="removeFlag{$news.id}"></span>
 		</li>
 	<?php } ?>

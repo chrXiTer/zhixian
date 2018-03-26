@@ -11,16 +11,16 @@ class AccountTool{
     }
     
     static private function findAUserById($userId){
-        $User = M('User');
+        $User = M('x_user');
         $_id = (int)$userId;
         $result = $User->where("id=".$_id)->select();
         return $result;
     }
     
     static private function findAUser($UserName){
-        $User = M('User');
-        $where['UserName'] = ':UserName';
-        $bind[':UserName'] = $UserName;
+        $User = M('x_user');
+        $where['Username'] = ':Username';
+        $bind[':Username'] = $UserName;
         $result = $User->where($where)->bind($bind)->select();
         if($result === false){
             error_log("数据库查询发生错误:".$User->getDbError()."uuu".$User->getLastSql());
@@ -97,8 +97,8 @@ class AccountTool{
             return $data;
         }
 
-        $UserM = M('user');
-        $UserData['UserName'] = $userName;
+        $UserM = M('x_user');
+        $UserData['Username'] = $userName;
         $UserData['Password'] = $password;
         $result = $UserM->add($UserData); // 写入数据到数据库 
         if($result){

@@ -46,7 +46,7 @@ class NewsTool{
 	static public function AddANews($title, $content){
 		$currentUser = AccountTool::getCurrentUser();
 
-		$newsM = M('x_'.COUNTY_SPELLING."_news");
+		$newsM = M("x_news");
         $data["Title"] = $title;
 		$data["Content"] = $content;
 		$data["PublisherId"] = $currentUser["id"];
@@ -56,7 +56,7 @@ class NewsTool{
 	
 	static public function DeleteANewsById($newsId){
 		$newsId = (int)$newsId;
-		$newsM = M('x_'.COUNTY_SPELLING."_news");
+		$newsM = M("x_news");
 		$result = $newsM->where('Id='.$newsId)->delete();
 		return $result;
 	}
